@@ -41,8 +41,8 @@
     font-family: 'Barlow', sans-serif;
     background: var(--cream);
     color: var(--text);
-    line-height: 1.65;
-    font-size: 16px;
+    line-height: 1.7;
+    font-size: 17px;
     overflow-x: hidden;
   }
 
@@ -227,7 +227,7 @@
   .btn-accent:disabled { opacity: 0.3; cursor: not-allowed; }
 
   /* ── CONTENT AREA ───────────────────────── */
-  .content { padding: 56px 64px 80px; max-width: 960px; margin: 0 auto; }
+  .content { padding: 48px 64px 80px; width: 100%; }
 
   /* ── PAGE ───────────────────────────────── */
   .page { display: none; animation: fadeIn 0.25s ease; }
@@ -259,8 +259,8 @@
   .module-title {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 800;
-    font-size: 44px;
-    line-height: 1.05;
+    font-size: 56px;
+    line-height: 1.0;
     color: var(--navy);
     margin-bottom: 14px;
     letter-spacing: -0.01em;
@@ -272,9 +272,9 @@
   }
 
   .module-desc {
-    font-size: 17px;
+    font-size: 19px;
     color: var(--muted);
-    max-width: 620px;
+    max-width: 780px;
     line-height: 1.7;
     font-weight: 400;
   }
@@ -290,10 +290,10 @@
   h2 {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 34px;
     color: var(--navy);
-    margin-bottom: 16px;
-    line-height: 1.15;
+    margin-bottom: 18px;
+    line-height: 1.1;
     letter-spacing: -0.01em;
   }
 
@@ -322,9 +322,44 @@
 
   .card-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .technique-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
+  }
+
+  .tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .conf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .price-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .pattern-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
   }
 
   .card-sm {
@@ -393,12 +428,7 @@
   .tip-box strong, .warn-box strong, .info-box strong { display: block; margin-bottom: 6px; color: var(--navy); }
 
   /* ── TOOL CHIPS ─────────────────────────── */
-  .tool-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 12px;
-    margin-bottom: 24px;
-  }
+  /* tool-grid moved to grid section above */
 
   .tool-card {
     background: var(--white);
@@ -477,12 +507,7 @@
   }
 
   /* ── PRICE TABLE ────────────────────────── */
-  .price-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-bottom: 24px;
-  }
+  /* price-grid moved to grid section above */
 
   .price-card {
     background: var(--white);
@@ -514,12 +539,7 @@
   .price-free { color: var(--success); font-weight: 600; }
 
   /* ── TECHNIQUE CARD ─────────────────────── */
-  .technique-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-bottom: 24px;
-  }
+  /* technique-list moved to grid section above */
 
   .technique-card {
     background: var(--white);
@@ -605,12 +625,7 @@
   .quiz-feedback.ko { background: var(--danger-dim);  color: var(--danger);  border-left: 3px solid var(--danger); }
 
   /* ── PATTERN CARDS ──────────────────────── */
-  .pattern-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
+  /* pattern-list moved to grid section above */
 
   .pattern-card {
     border-radius: var(--radius);
@@ -728,8 +743,8 @@
     .mobile-toggle { display: flex; }
     .content { padding: 32px 24px 64px; }
     .topbar { padding: 0 24px; }
-    .do-dont, .card-grid, .technique-list, .price-grid, .pattern-list { grid-template-columns: 1fr; }
-    .module-title { font-size: 32px; }
+    .do-dont, .card-grid, .technique-list, .price-grid, .pattern-list, .conf-grid { grid-template-columns: 1fr; }
+    .module-title { font-size: 34px; }
   }
 
   /* ── HERO PAGE ──────────────────────────── */
@@ -828,12 +843,7 @@
   .start-btn:hover { background: var(--orange); transform: translateY(-1px); }
 
   /* ── CONFIDENTIALITY TABLE ──────────────── */
-  .conf-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
+  /* conf-grid moved to grid section above */
 
   .conf-card {
     background: var(--white);

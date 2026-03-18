@@ -734,25 +734,12 @@
 
   /* ── HERO PAGE ──────────────────────────── */
   .hero-page {
-    min-height: calc(100vh - 58px);
-    display: flex;
-    align-items: center;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
+    min-height: auto;
+    display: block;
+    padding: 60px 0 20px;
   }
 
-  .hero-page::before {
-    content: '';
-    position: absolute;
-    top: 0; right: -120px;
-    width: 420px; height: 420px;
-    border-radius: 50%;
-    background: rgba(217,95,24,0.06);
-    pointer-events: none;
-  }
-
-  .hero-inner { max-width: 680px; }
+  .hero-inner { max-width: 100%; }
 
   .hero-eyebrow {
     font-size: 11px;

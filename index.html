@@ -71,7 +71,7 @@
   .sidebar-logo {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 20px;
     color: #FFFFFF;
     line-height: 1.25;
     margin-bottom: 6px;
@@ -79,11 +79,11 @@
   }
 
   .sidebar-sub {
-    font-size: 11px;
-    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .sidebar-nav { padding: 14px 0; flex: 1; }
@@ -91,25 +91,25 @@
   .nav-section { padding: 0 14px 6px; }
 
   .nav-section-title {
-    font-size: 10px;
+    font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: rgba(255,255,255,0.35);
+    color: rgba(255,255,255,0.5);
     padding: 10px 10px 5px;
     margin-bottom: 2px;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .nav-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 9px 12px;
+    padding: 10px 12px;
     border-radius: 7px;
     cursor: pointer;
-    font-size: 13.5px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.55);
+    font-size: 14.5px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
     transition: all var(--transition);
     border: none;
     background: none;
@@ -139,10 +139,10 @@
   .progress-label {
     display: flex;
     justify-content: space-between;
-    font-size: 11px;
-    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
     margin-bottom: 8px;
-    font-weight: 500;
+    font-weight: 600;
   }
   .progress-track {
     height: 3px;
@@ -276,7 +276,7 @@
     color: var(--muted);
     max-width: 780px;
     line-height: 1.7;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   /* ── DIVIDER ────────────────────────────── */
@@ -298,8 +298,8 @@
   }
 
   h3 {
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--muted);
@@ -462,9 +462,10 @@
   .badge-us { background: var(--surface2); color: var(--muted); }
 
   .tool-card-desc {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--muted);
     line-height: 1.55;
+    font-weight: 500;
   }
 
   /* ── COMPARISON TABLE ───────────────────── */
@@ -534,8 +535,8 @@
     gap: 8px;
   }
 
-  .price-label { color: var(--muted); flex-shrink: 0; }
-  .price-val { font-weight: 600; color: var(--text); }
+  .price-label { color: var(--muted); flex-shrink: 0; font-weight: 600; font-size: 13px; }
+  .price-val { font-weight: 700; color: var(--navy); font-size: 14px; }
   .price-free { color: var(--success); font-weight: 600; }
 
   /* ── TECHNIQUE CARD ─────────────────────── */
@@ -568,9 +569,10 @@
   }
 
   .technique-desc {
-    font-size: 13.5px;
+    font-size: 14.5px;
     color: var(--muted);
-    line-height: 1.55;
+    line-height: 1.6;
+    font-weight: 500;
   }
 
   /* ── QUIZ ───────────────────────────────── */
@@ -655,9 +657,10 @@
   }
 
   .pattern-ex {
-    font-size: 12.5px;
+    font-size: 13.5px;
     color: var(--muted);
     line-height: 1.5;
+    font-weight: 500;
   }
 
   /* ── QUOTE ──────────────────────────────── */
@@ -695,8 +698,9 @@
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    font-size: 14.5px;
-    color: #2E4050;
+    font-size: 15.5px;
+    color: #1A2A35;
+    font-weight: 500;
   }
 
   .checklist li::before {
@@ -791,11 +795,11 @@
   }
 
   .hero-sub {
-    font-size: 17px;
+    font-size: 19px;
     color: var(--muted);
-    max-width: 520px;
+    max-width: 680px;
     line-height: 1.75;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 36px;
   }
 
@@ -807,13 +811,22 @@
   }
 
   .hero-tool-chip {
-    padding: 5px 14px;
-    border-radius: 4px;
-    border: 1px solid var(--border);
-    font-size: 12.5px;
-    color: var(--muted);
-    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: 2px solid var(--border);
+    font-size: 14px;
+    color: var(--navy);
+    font-weight: 700;
     background: var(--white);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all var(--transition);
+  }
+
+  .hero-tool-chip:hover {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
   }
 
   .hero-meta {
@@ -854,8 +867,8 @@
 
   .conf-tool { font-weight: 700; font-size: 14.5px; color: var(--navy); margin-bottom: 12px; }
   .conf-row  { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 7px; font-size: 12.5px; }
-  .conf-label { color: var(--muted); width: 82px; flex-shrink: 0; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
-  .conf-val  { color: #2E4050; line-height: 1.45; }
+  .conf-label { color: var(--muted); width: 90px; flex-shrink: 0; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+  .conf-val  { color: #2E4050; line-height: 1.5; font-size: 13.5px; font-weight: 500; }
 
   .rgpd-ok   { color: var(--success); font-weight: 700; }
   .rgpd-warn { color: var(--warn); font-weight: 600; }
@@ -1049,13 +1062,13 @@
             <p class="hero-sub">Comprendre ce que font réellement ChatGPT, Claude, Gemini, Copilot, Perplexity, Le Chat et Poe — et savoir lequel choisir selon la tâche.</p>
 
             <div class="hero-tools">
-              <span class="hero-tool-chip">ChatGPT</span>
-              <span class="hero-tool-chip">Claude</span>
-              <span class="hero-tool-chip">Gemini</span>
-              <span class="hero-tool-chip">Copilot</span>
-              <span class="hero-tool-chip">Perplexity</span>
-              <span class="hero-tool-chip">Le Chat 🇫🇷</span>
-              <span class="hero-tool-chip">Poe</span>
+              <button class="hero-tool-chip" onclick="showPage('chatgpt', document.querySelector('[onclick*=\'chatgpt\']'))">ChatGPT</button>
+              <button class="hero-tool-chip" onclick="showPage('claude', document.querySelector('[onclick*=\'claude\']'))">Claude</button>
+              <button class="hero-tool-chip" onclick="showPage('gemini', document.querySelector('[onclick*=\'gemini\']'))">Gemini</button>
+              <button class="hero-tool-chip" onclick="showPage('copilot', document.querySelector('[onclick*=\'copilot\']'))">Copilot</button>
+              <button class="hero-tool-chip" onclick="showPage('perplexity', document.querySelector('[onclick*=\'perplexity\']'))">Perplexity</button>
+              <button class="hero-tool-chip" onclick="showPage('lechat', document.querySelector('[onclick*=\'lechat\']'))">Le Chat 🇫🇷</button>
+              <button class="hero-tool-chip" onclick="showPage('poe', document.querySelector('[onclick*=\'poe\']'))">Poe</button>
             </div>
 
             <button class="start-btn" onclick="navigate(1)">Commencer la formation →</button>

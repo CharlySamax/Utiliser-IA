@@ -17,7 +17,7 @@
     --surface2: #F5F0E8;
     --border:  rgba(0,53,87,0.12);
     --text:    #1A2A35;
-    --muted:   #6B7E8C;
+    --muted:   #3D5263;
     --accent:       var(--orange);
     --accent-dim:   rgba(217,95,24,0.08);
     --accent2:      var(--blue);
@@ -42,7 +42,7 @@
     background: var(--cream);
     color: var(--text);
     line-height: 1.7;
-    font-size: 17px;
+    font-size: 18px;
     overflow-x: hidden;
   }
 
@@ -245,10 +245,10 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 4px 12px;
+    padding: 5px 14px;
     border-radius: 4px;
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     background: var(--accent-dim);
@@ -401,9 +401,9 @@
   /* ── TIP / WARN / INFO BOXES ────────────── */
   .tip-box, .warn-box, .info-box {
     border-radius: var(--radius);
-    padding: 18px 22px;
+    padding: 20px 24px;
     margin-bottom: 20px;
-    font-size: 14.5px;
+    font-size: 16px;
     line-height: 1.65;
   }
 
@@ -462,7 +462,7 @@
   .badge-us { background: var(--surface2); color: var(--muted); }
 
   .tool-card-desc {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--muted);
     line-height: 1.55;
     font-weight: 500;
@@ -472,25 +472,27 @@
   .compare-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .compare-table th {
     text-align: left;
-    padding: 12px 16px;
+    padding: 14px 18px;
     background: var(--navy);
-    color: rgba(255,255,255,0.7);
-    font-size: 11px;
+    color: rgba(255,255,255,0.85);
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-weight: 700;
   }
 
   .compare-table td {
-    padding: 13px 16px;
+    padding: 15px 18px;
     border-bottom: 1px solid var(--border);
-    color: #2E4050;
+    color: #1A2A35;
     vertical-align: top;
+    font-size: 16px;
+    font-weight: 500;
   }
 
   .compare-table tr:last-child td { border-bottom: none; }
@@ -535,8 +537,8 @@
     gap: 8px;
   }
 
-  .price-label { color: var(--muted); flex-shrink: 0; font-weight: 600; font-size: 13px; }
-  .price-val { font-weight: 700; color: var(--navy); font-size: 14px; }
+  .price-label { color: var(--muted); flex-shrink: 0; font-weight: 700; font-size: 14px; }
+  .price-val { font-weight: 700; color: var(--navy); font-size: 15px; }
   .price-free { color: var(--success); font-weight: 600; }
 
   /* ── TECHNIQUE CARD ─────────────────────── */
@@ -553,8 +555,8 @@
   .technique-card:hover { border-color: var(--orange); }
 
   .technique-num {
-    font-size: 11px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--orange);
@@ -562,14 +564,14 @@
   }
 
   .technique-title {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 8px;
   }
 
   .technique-desc {
-    font-size: 14.5px;
+    font-size: 16px;
     color: var(--muted);
     line-height: 1.6;
     font-weight: 500;
@@ -650,38 +652,38 @@
   }
 
   .pattern-title {
-    font-size: 13.5px;
+    font-size: 15px;
     font-weight: 700;
     margin-bottom: 6px;
     color: var(--navy);
   }
 
   .pattern-ex {
-    font-size: 13.5px;
+    font-size: 14px;
     color: var(--muted);
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   /* ── QUOTE ──────────────────────────────── */
   blockquote {
     border-left: 3px solid var(--orange);
-    padding: 18px 22px;
+    padding: 20px 24px;
     margin: 28px 0;
     background: var(--white);
     border-radius: 0 var(--radius) var(--radius) 0;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--navy);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.6;
   }
 
   blockquote cite {
     display: block;
     margin-top: 8px;
-    font-size: 12px;
+    font-size: 13px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     color: var(--muted);
   }
 
@@ -867,8 +869,8 @@
 
   .conf-tool { font-weight: 700; font-size: 14.5px; color: var(--navy); margin-bottom: 12px; }
   .conf-row  { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 7px; font-size: 12.5px; }
-  .conf-label { color: var(--muted); width: 90px; flex-shrink: 0; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
-  .conf-val  { color: #2E4050; line-height: 1.5; font-size: 13.5px; font-weight: 500; }
+  .conf-label { color: var(--muted); width: 90px; flex-shrink: 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+  .conf-val  { color: #1A2A35; line-height: 1.5; font-size: 14.5px; font-weight: 600; }
 
   .rgpd-ok   { color: var(--success); font-weight: 700; }
   .rgpd-warn { color: var(--warn); font-weight: 600; }
@@ -897,19 +899,19 @@
 
   .scenario-task {
     flex: 1;
-    font-size: 14.5px;
+    font-size: 16px;
     color: var(--text);
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .scenario-tool {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 4px 12px;
+    padding: 6px 14px;
     border-radius: 4px;
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 13.5px;
+    font-weight: 800;
     white-space: nowrap;
   }
 

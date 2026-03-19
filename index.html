@@ -100,6 +100,15 @@
     font-weight: 700;
   }
 
+  .nav-section-title.nav-section-big {
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.92);
+    letter-spacing: 0.14em;
+    padding: 12px 10px 6px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 6px;
+  }
+
   .nav-item {
     display: flex;
     align-items: center;
@@ -934,6 +943,414 @@
     border-radius: 4px;
     border: 1px solid var(--border);
   }
+
+  /* ── SEARCH BAR ─────────────────────────── */
+  .sit-search-wrap {
+    position: relative;
+    margin-bottom: 24px;
+  }
+  .sit-search {
+    width: 100%;
+    padding: 13px 18px 13px 46px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text);
+    background: var(--white);
+    transition: border-color var(--transition), box-shadow var(--transition);
+    outline: none;
+  }
+  .sit-search:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(4,88,140,0.1);
+  }
+  .sit-search::placeholder { color: var(--muted); font-weight: 400; }
+  .sit-search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 17px;
+    pointer-events: none;
+  }
+  .sit-search-count {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--muted);
+    background: var(--surface2);
+    padding: 3px 9px;
+    border-radius: 20px;
+  }
+  .sit-no-results {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--muted);
+    font-size: 16px;
+    font-weight: 500;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+  }
+  .sit-wrapper.hidden { display: none; }
+  .sit-row.hidden { display: none; }
+
+  /* ── HOME SEARCH ─────────────────────────── */
+  .hero-search-wrap {
+    position: relative;
+    margin-bottom: 24px;
+    max-width: 520px;
+  }
+  .hero-search {
+    width: 100%;
+    padding: 14px 18px 14px 48px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text);
+    background: var(--white);
+    transition: border-color var(--transition), box-shadow var(--transition);
+    outline: none;
+  }
+  .hero-search:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(217,95,24,0.1);
+  }
+  .hero-search::placeholder { color: var(--muted); font-weight: 400; }
+  .hero-search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 18px;
+    pointer-events: none;
+  }
+  .hero-search-results {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0; right: 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    z-index: 300;
+    max-height: 360px;
+    overflow-y: auto;
+  }
+  .hero-search-results.open { display: block; }
+  .hero-search-result-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background var(--transition);
+  }
+  .hero-search-result-item:last-child { border-bottom: none; }
+  .hero-search-result-item:hover { background: var(--surface2); }
+  .hero-result-text {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+  }
+  .hero-result-tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .hero-result-tag.gen { background: var(--accent2-dim); color: var(--blue); }
+  .hero-result-tag.brs { background: rgba(217,95,24,0.08); color: var(--orange); }
+  .hero-search-empty {
+    padding: 20px 16px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* ── BRS SIDEBAR SECTION ────────────────── */
+  .nav-section-brs .nav-section-title {
+    color: rgba(255,255,255,0.9);
+    background: rgba(217,95,24,0.18);
+    border-radius: 5px;
+    padding: 6px 10px;
+    margin-bottom: 4px;
+  }
+  .nav-section-brs .nav-item {
+    padding-left: 18px;
+  }
+
+  /* ── HOME DUAL ENTRY ────────────────────── */
+  .hero-entry-group {
+    margin-bottom: 20px;
+  }
+  .hero-entry-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .hero-entry-sep {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 18px 0;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  .hero-entry-sep::before,
+  .hero-entry-sep::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .hero-situation-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .hero-situation-chip {
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: var(--accent2-dim);
+    color: var(--blue);
+    font-size: 13.5px;
+    font-weight: 700;
+    border: 1px solid rgba(4,88,140,0.15);
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+  .hero-situation-chip:hover {
+    background: var(--blue);
+    color: #fff;
+    border-color: var(--blue);
+  }
+  .hero-situation-chip.brs {
+    background: rgba(217,95,24,0.08);
+    color: var(--orange);
+    border-color: rgba(217,95,24,0.2);
+  }
+  .hero-situation-chip.brs:hover {
+    background: var(--orange);
+    color: #fff;
+    border-color: var(--orange);
+  }
+
+  /* ── SITUATION TABLE ────────────────────── */
+  .sit-wrapper {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+  .sit-cat-header {
+    padding: 11px 18px;
+    background: var(--navy);
+    color: rgba(255,255,255,0.9);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .sit-row {
+    display: grid;
+    grid-template-columns: 1fr 130px 110px auto;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    transition: background var(--transition);
+    position: relative;
+  }
+  /* Tool shown before sensitivity badge */
+  .sit-row .sit-tool  { order: 1; }
+  .sit-row .sens      { order: 2; }
+  .sit-row .sit-situation { order: 0; }
+  .sit-row .tip-trigger   { order: 3; }
+  .sit-row:last-child { border-bottom: none; }
+  .sit-row:hover { background: var(--surface2); }
+  .sit-situation {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.45;
+  }
+  .sit-tool {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 12.5px;
+    font-weight: 800;
+    white-space: nowrap;
+    text-align: center;
+  }
+  /* sensitivity badges */
+  .sens {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  .sens::before { content: ''; width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .sens-low  { background: var(--success-dim); color: var(--success); }
+  .sens-low::before  { background: var(--success); }
+  .sens-mid  { background: var(--warn-dim); color: var(--warn); }
+  .sens-mid::before  { background: var(--warn); }
+  .sens-high { background: var(--danger-dim); color: var(--danger); }
+  .sens-high::before { background: var(--danger); }
+
+  /* tooltip */
+  .tip-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--accent2-dim);
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    flex-shrink: 0;
+    border: none;
+    transition: background var(--transition);
+    position: relative;
+  }
+  .tip-trigger:hover { background: var(--blue); color: #fff; }
+  .tip-trigger:hover .tip-content,
+  .tip-trigger:focus .tip-content { display: block; }
+  .tip-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    width: 280px;
+    background: var(--navy);
+    color: rgba(255,255,255,0.92);
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 14px 16px;
+    border-radius: 8px;
+    z-index: 200;
+    font-weight: 400;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  }
+  .tip-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .tip-content ul li {
+    padding: 3px 0;
+    padding-left: 12px;
+    position: relative;
+  }
+  .tip-content ul li::before {
+    content: '·';
+    position: absolute;
+    left: 2px;
+    color: var(--orange);
+  }
+
+  /* BRS table : équipe column */
+  .sit-row-brs {
+    grid-template-columns: 110px 1fr 140px auto;
+  }
+  .sit-equipe {
+    font-size: 11.5px;
+    font-weight: 800;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+  }
+
+  /* Copilot confidence levels */
+  .conf-ok   { background: var(--success-dim); color: var(--success); }
+  .conf-mix  { background: var(--warn-dim);    color: var(--warn); }
+  .conf-no   { background: var(--danger-dim);  color: var(--danger); }
+
+  /* Réflexes Do/Don't */
+  .reflexes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  @media (max-width: 720px) { .reflexes-grid { grid-template-columns: 1fr; } }
+  .reflexes-col-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .reflexes-col-title.do   { color: var(--success); }
+  .reflexes-col-title.dont { color: var(--danger); }
+  .reflex-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin-bottom: 10px;
+  }
+  .reflex-card.do   { border-left: 3px solid var(--success); }
+  .reflex-card.dont { border-left: 3px solid var(--danger); }
+  .reflex-num {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  .reflex-card.do   .reflex-num { color: var(--success); }
+  .reflex-card.dont .reflex-num { color: var(--danger); }
+  .reflex-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .reflex-body {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    font-weight: 500;
+  }
 </style>
 </head>
 <body>
@@ -950,14 +1367,14 @@
 
     <nav class="sidebar-nav">
       <div class="nav-section">
-        <div class="nav-section-title">Introduction</div>
+        <div class="nav-section-title nav-section-big">Introduction</div>
         <button class="nav-item active" onclick="showPage('intro', this)">
           <span class="nav-dot"></span>Vue d'ensemble
         </button>
       </div>
 
       <div class="nav-section">
-        <div class="nav-section-title">Comprendre les LLM</div>
+        <div class="nav-section-title nav-section-big">Comprendre les LLM</div>
         <button class="nav-item" onclick="showPage('llm-fonctionnement', this)">
           <span class="nav-dot"></span>Fonctionnement réel
         </button>
@@ -970,7 +1387,7 @@
       </div>
 
       <div class="nav-section">
-        <div class="nav-section-title">Outils — Do / Don't</div>
+        <div class="nav-section-title nav-section-big">Outils</div>
         <button class="nav-item" onclick="showPage('chatgpt', this)">
           <span class="nav-dot"></span>ChatGPT
         </button>
@@ -992,23 +1409,35 @@
         <button class="nav-item" onclick="showPage('poe', this)">
           <span class="nav-dot"></span>Poe (Quora)
         </button>
-      </div>
-
-      <div class="nav-section">
-        <div class="nav-section-title">Choisir & utiliser</div>
-        <button class="nav-item" onclick="showPage('scenarios', this)">
-          <span class="nav-dot"></span>Quel outil pour quelle tâche
-        </button>
         <button class="nav-item" onclick="showPage('confidentialite', this)">
           <span class="nav-dot"></span>Confidentialité & RGPD
         </button>
         <button class="nav-item" onclick="showPage('tarifs', this)">
-          <span class="nav-dot"></span>Tarifs — mars 2026
+          <span class="nav-dot"></span>Tarifs · mars 2026
         </button>
       </div>
 
       <div class="nav-section">
-        <div class="nav-section-title">Prompting</div>
+        <div class="nav-section-title nav-section-big">Utiliser</div>
+        <button class="nav-item" onclick="showPage('scenarios', this)">
+          <span class="nav-dot"></span>Situations générales
+      </div>
+
+      <div class="nav-section nav-section-brs">
+        <div class="nav-section-title nav-section-big">BRS</div>
+        <button class="nav-item" onclick="showPage('brs-situations', this)">
+          <span class="nav-dot"></span>Situations BRS
+        </button>
+        <button class="nav-item" onclick="showPage('brs-copilot', this)">
+          <span class="nav-dot"></span>Copilot chez BRS
+        </button>
+        <button class="nav-item" onclick="showPage('brs-reflexes', this)">
+          <span class="nav-dot"></span>Réflexes IA
+        </button>
+      </div>
+
+      <div class="nav-section">
+        <div class="nav-section-title nav-section-big">Prompting</div>
         <button class="nav-item" onclick="showPage('regles-prompt', this)">
           <span class="nav-dot"></span>Règles universelles
         </button>
@@ -1021,7 +1450,7 @@
       </div>
 
       <div class="nav-section">
-        <div class="nav-section-title">Valider</div>
+        <div class="nav-section-title nav-section-big">Valider</div>
         <button class="nav-item" onclick="showPage('quiz', this)">
           <span class="nav-dot"></span>Quiz de validation
         </button>
@@ -1046,6 +1475,7 @@
         Formation IA <span id="topbar-title">Vue d'ensemble</span>
       </div>
       <div class="topbar-actions">
+        <button class="btn btn-ghost" id="btn-home" onclick="showPage('intro', document.querySelector('[onclick*=\'intro\']'))" title="Retour à l'accueil">⌂</button>
         <button class="btn btn-ghost" id="btn-prev" onclick="navigate(-1)">← Précédent</button>
         <button class="btn btn-accent" id="btn-next" onclick="navigate(1)">Suivant →</button>
       </div>
@@ -1061,16 +1491,39 @@
           <div class="hero-inner">
             <div class="hero-eyebrow">Formation · Génération IA</div>
             <h1 class="hero-title">Comment bien utiliser<br><em>chaque outil IA</em></h1>
-            <p class="hero-sub">Comprendre ce que font réellement ChatGPT, Claude, Gemini, Copilot, Perplexity, Le Chat et Poe — et savoir lequel choisir selon la tâche.</p>
+            <p class="hero-sub">Comprendre ce que font réellement ChatGPT, Claude, Gemini, Copilot, Perplexity, Le Chat et Poe, et savoir lequel choisir selon la tâche.</p>
 
-            <div class="hero-tools">
-              <button class="hero-tool-chip" onclick="showPage('chatgpt', document.querySelector('[onclick*=\'chatgpt\']'))">ChatGPT</button>
-              <button class="hero-tool-chip" onclick="showPage('claude', document.querySelector('[onclick*=\'claude\']'))">Claude</button>
-              <button class="hero-tool-chip" onclick="showPage('gemini', document.querySelector('[onclick*=\'gemini\']'))">Gemini</button>
-              <button class="hero-tool-chip" onclick="showPage('copilot', document.querySelector('[onclick*=\'copilot\']'))">Copilot</button>
-              <button class="hero-tool-chip" onclick="showPage('perplexity', document.querySelector('[onclick*=\'perplexity\']'))">Perplexity</button>
-              <button class="hero-tool-chip" onclick="showPage('lechat', document.querySelector('[onclick*=\'lechat\']'))">Le Chat 🇫🇷</button>
-              <button class="hero-tool-chip" onclick="showPage('poe', document.querySelector('[onclick*=\'poe\']'))">Poe</button>
+            <div class="hero-search-wrap" id="hero-search-wrap">
+              <span class="hero-search-icon">🔍</span>
+              <input class="hero-search" id="hero-search" type="text" placeholder="Chercher une situation : traduire, contrat, veille, charterparty..." autocomplete="off" oninput="heroSearch(this.value)" onkeydown="heroSearchKey(event)">
+              <div class="hero-search-results" id="hero-search-results"></div>
+            </div>
+
+            <div class="hero-entry-sep">ou naviguer par</div>
+
+            <div class="hero-entry-group">
+              <div class="hero-entry-label">Accès par outil</div>
+              <div class="hero-tools">
+                <button class="hero-tool-chip" onclick="showPage('chatgpt', document.querySelector('[onclick*=\'chatgpt\']'))">ChatGPT</button>
+                <button class="hero-tool-chip" onclick="showPage('claude', document.querySelector('[onclick*=\'claude\']'))">Claude</button>
+                <button class="hero-tool-chip" onclick="showPage('gemini', document.querySelector('[onclick*=\'gemini\']'))">Gemini</button>
+                <button class="hero-tool-chip" onclick="showPage('copilot', document.querySelector('[onclick*=\'copilot\']'))">Copilot</button>
+                <button class="hero-tool-chip" onclick="showPage('perplexity', document.querySelector('[onclick*=\'perplexity\']'))">Perplexity</button>
+                <button class="hero-tool-chip" onclick="showPage('lechat', document.querySelector('[onclick*=\'lechat\']'))">Le Chat 🇫🇷</button>
+                <button class="hero-tool-chip" onclick="showPage('poe', document.querySelector('[onclick*=\'poe\']'))">Poe</button>
+              </div>
+            </div>
+
+            <div class="hero-entry-sep">ou</div>
+
+            <div class="hero-entry-group">
+              <div class="hero-entry-label">Accès par situation</div>
+              <div class="hero-situation-chips">
+                <button class="hero-situation-chip" onclick="showPage('scenarios', document.querySelector('[onclick*=\'scenarios\']'))">Situations générales</button>
+                <button class="hero-situation-chip brs" onclick="showPage('brs-situations', document.querySelector('[onclick*=\'brs-situations\']'))">Situations BRS</button>
+                <button class="hero-situation-chip brs" onclick="showPage('brs-copilot', document.querySelector('[onclick*=\'brs-copilot\']'))">Copilot chez BRS</button>
+                <button class="hero-situation-chip brs" onclick="showPage('brs-reflexes', document.querySelector('[onclick*=\'brs-reflexes\']'))">Réflexes IA BRS</button>
+              </div>
             </div>
 
             <button class="start-btn" onclick="navigate(1)">Commencer la formation →</button>
@@ -1089,11 +1542,11 @@
         <div class="module-hero">
           <div class="module-tag">Module 1</div>
           <h1 class="module-title">Ce que les LLM <em>font réellement</em></h1>
-          <p class="module-desc">L'«&nbsp;intelligence artificielle&nbsp;» a été inventée en 1956. Comprendre comment elle fonctionne, c'est savoir pourquoi elle se trompe — et comment l'utiliser mieux.</p>
+          <p class="module-desc">L'«&nbsp;intelligence artificielle&nbsp;» a été inventée en 1956. Comprendre comment elle fonctionne, c'est savoir pourquoi elle se trompe, et comment l'utiliser mieux.</p>
         </div>
 
         <h2>Faire illusion ≠ comprendre</h2>
-        <p>L'illusion d'intelligence d'un LLM pousse à lui faire confiance sur des faits, lui attribuer une intention, lui déléguer des jugements. Démystifier son fonctionnement permet de l'utiliser mieux — comme on utilise bien une perceuse quand on sait ce qu'elle peut et ne peut pas faire.</p>
+        <p>L'illusion d'intelligence d'un LLM pousse à lui faire confiance sur des faits, lui attribuer une intention, lui déléguer des jugements. Démystifier son fonctionnement permet de l'utiliser mieux, comme on utilise bien une perceuse quand on sait ce qu'elle peut et ne peut pas faire.</p>
 
         <div class="info-box">
           <strong>Ce qui compte</strong>
@@ -1102,33 +1555,33 @@
 
         <div class="divider"></div>
 
-        <h2>Comment ça fonctionne — en trois étapes</h2>
+        <h2>Comment ça fonctionne : en trois étapes</h2>
 
         <div class="card" style="margin-bottom:14px;">
-          <div class="technique-num">Étape 1 — Embeddings</div>
+          <div class="technique-num">Étape 1 : Embeddings</div>
           <div class="technique-title" style="font-size:16px;color:var(--navy);margin-bottom:10px;">Convertir le langage en calcul</div>
-          <p>Un LLM ne lit pas du texte. Il calcule. Chaque mot est converti en une liste de plusieurs centaines de nombres — un <strong>vecteur</strong> (embedding). Ces nombres encodent les relations entre mots&nbsp;: «&nbsp;chien&nbsp;» et «&nbsp;chat&nbsp;» produisent des vecteurs proches&nbsp;; «&nbsp;couteau&nbsp;» dans un roman policier et dans une recette donnent des vecteurs différents.</p>
+          <p>Un LLM ne lit pas du texte. Il calcule. Chaque mot est converti en une liste de plusieurs centaines de nombres : un <strong>vecteur</strong> (embedding). Ces nombres encodent les relations entre mots&nbsp;: «&nbsp;chien&nbsp;» et «&nbsp;chat&nbsp;» produisent des vecteurs proches&nbsp;; «&nbsp;couteau&nbsp;» dans un roman policier et dans une recette donnent des vecteurs différents.</p>
         </div>
 
         <div class="card" style="margin-bottom:14px;">
-          <div class="technique-num">Étape 2 — Transformers</div>
+          <div class="technique-num">Étape 2 : Transformers</div>
           <div class="technique-title" style="font-size:16px;color:var(--navy);margin-bottom:10px;">L'attention : peser chaque mot par rapport aux autres</div>
-          <p>Invention Google (2017). Avant les Transformers, les modèles lisaient mot par mot et perdaient le contexte. Le mécanisme d'<strong>attention</strong> permet de peser l'importance de n'importe quel mot de la phrase par rapport à tous les autres, quelle que soit sa position. C'est ce qui donne l'illusion de comprendre — en réalité : des calculs sur des distances entre vecteurs.</p>
+          <p>Invention Google (2017). Avant les Transformers, les modèles lisaient mot par mot et perdaient le contexte. Le mécanisme d'<strong>attention</strong> permet de peser l'importance de n'importe quel mot de la phrase par rapport à tous les autres, quelle que soit sa position. C'est ce qui donne l'illusion de comprendre, en réalité : des calculs sur des distances entre vecteurs.</p>
         </div>
 
         <div class="card" style="margin-bottom:24px;">
-          <div class="technique-num">Étape 3 — Prédiction</div>
+          <div class="technique-num">Étape 3 : Prédiction</div>
           <div class="technique-title" style="font-size:16px;color:var(--navy);margin-bottom:10px;">Prédire le mot suivant, encore et encore</div>
           <p>C'est tout. Le LLM prédit le mot suivant le plus probable. Puis le suivant. Puis le suivant. Ce qui produit trois conséquences&nbsp;:</p>
           <ul class="checklist" style="margin-top:14px;">
-            <li>Il ne stocke pas d'informations&nbsp;: il reconstruit à partir des structures statistiques apprises — pas de mémoire verbatim.</li>
+            <li>Il ne stocke pas d'informations&nbsp;: il reconstruit à partir des structures statistiques apprises, pas de mémoire verbatim.</li>
             <li>Il ne sait pas ce qu'il ne sait pas&nbsp;: quand l'information manque, il génère la réponse la plus cohérente possible, quitte à l'inventer (<strong>hallucination</strong>).</li>
             <li>Il est une boîte noire&nbsp;: GPT-4 compte des centaines de milliards de paramètres. Personne ne peut expliquer pourquoi il produit tel mot plutôt qu'un autre.</li>
           </ul>
         </div>
 
         <blockquote>
-          «&nbsp;Ce n'est pas l'IA qui crée l'illusion — c'est notre tendance à prêter une intention là où il n'y a qu'un algorithme.&nbsp;»
+          «&nbsp;Ce n'est pas l'IA qui crée l'illusion, c'est notre tendance à prêter une intention là où il n'y a qu'un algorithme.&nbsp;»
           <cite>Joseph Weizenbaum, Computer Power and Human Reason, 1976</cite>
         </blockquote>
       </div>
@@ -1140,7 +1593,7 @@
         <div class="module-hero">
           <div class="module-tag">Module 1</div>
           <h1 class="module-title">Limites <em>structurelles</em></h1>
-          <p class="module-desc">Ce que les LLM ne feront jamais bien — et l'enjeu stratégique que cela crée pour quiconque les utilise.</p>
+          <p class="module-desc">Ce que les LLM ne feront jamais bien, et l'enjeu stratégique que cela crée pour quiconque les utilise.</p>
         </div>
 
         <div class="card-grid">
@@ -1150,11 +1603,11 @@
           </div>
           <div class="card-sm">
             <div class="technique-num">Limite 2</div>
-            <p style="margin:0;font-size:13.5px;">Ils ne savent pas ce qu'ils ne savent pas — et ne le signalent pas toujours.</p>
+            <p style="margin:0;font-size:13.5px;">Ils ne savent pas ce qu'ils ne savent pas, et ne le signalent pas toujours.</p>
           </div>
           <div class="card-sm">
             <div class="technique-num">Limite 3</div>
-            <p style="margin:0;font-size:13.5px;">Interprétabilité nulle. On ne peut pas expliquer pourquoi ils produisent telle réponse — ce qui rend la délégation de décisions risquée.</p>
+            <p style="margin:0;font-size:13.5px;">Interprétabilité nulle. On ne peut pas expliquer pourquoi ils produisent telle réponse, ce qui rend la délégation de décisions risquée.</p>
           </div>
           <div class="card-sm">
             <div class="technique-num">Limite 4</div>
@@ -1166,7 +1619,7 @@
           </div>
           <div class="card-sm">
             <div class="technique-num">Limite 6</div>
-            <p style="margin:0;font-size:13.5px;">Accélérateur de premier jet — pas de raisonnement expert sur des sujets spécialisés que vous ne maîtrisez pas.</p>
+            <p style="margin:0;font-size:13.5px;">Accélérateur de premier jet, pas de raisonnement expert sur des sujets spécialisés que vous ne maîtrisez pas.</p>
           </div>
         </div>
 
@@ -1186,7 +1639,7 @@
               <tr>
                 <td><strong>Objectif</strong></td>
                 <td>Prédire correctement un résultat à partir de données connues</td>
-                <td>Produire une réponse «&nbsp;plausible&nbsp;» statistiquement — pas vérifier la vérité</td>
+                <td>Produire une réponse «&nbsp;plausible&nbsp;» statistiquement, pas vérifier la vérité</td>
               </tr>
               <tr>
                 <td><strong>Données</strong></td>
@@ -1209,7 +1662,7 @@
 
         <div class="tip-box">
           <strong>📊 Étude Harvard / BCG (2023)</strong>
-          Des consultants utilisant ChatGPT ont amélioré leur productivité et la qualité de leur travail — <em>uniquement sur les tâches pour lesquelles l'outil est adapté</em>. Sur les autres, les résultats se dégradaient. Savoir faire la différence est une compétence en soi.
+          Des consultants utilisant ChatGPT ont amélioré leur productivité et la qualité de leur travail, <em>uniquement sur les tâches pour lesquelles l'outil est adapté</em>. Sur les autres, les résultats se dégradaient. Savoir faire la différence est une compétence en soi.
         </div>
       </div>
 
@@ -1220,7 +1673,7 @@
         <div class="module-hero">
           <div class="module-tag">Module 1</div>
           <h1 class="module-title">D'où vient ce que <em>sait l'IA</em></h1>
-          <p class="module-desc">Chaque outil a été entraîné sur des données différentes — ce qui détermine sa fraîcheur, sa couverture et ses angles morts.</p>
+          <p class="module-desc">Chaque outil a été entraîné sur des données différentes, ce qui détermine sa fraîcheur, sa couverture et ses angles morts.</p>
         </div>
 
         <div class="tool-grid">
@@ -1230,11 +1683,11 @@
           </div>
           <div class="tool-card">
             <div class="tool-card-name">Claude <span class="tool-badge badge-us">US</span></div>
-            <div class="tool-card-desc">Web public, livres, code, RLHF. Arrêt début 2025. <strong>Fenêtre de 200 000 tokens</strong> (~150 000 mots) — le point fort distinctif. Recherche web selon le plan.</div>
+            <div class="tool-card-desc">Web public, livres, code, RLHF. Arrêt début 2025. <strong>Fenêtre de 200 000 tokens</strong> (~150 000 mots) : le point fort distinctif. Recherche web selon le plan.</div>
           </div>
           <div class="tool-card">
             <div class="tool-card-name">Gemini <span class="tool-badge badge-us">US</span></div>
-            <div class="tool-card-desc">Web public + Google Search, YouTube, Maps, Gmail anonymisé — avantage exclusif. Connexion web native et permanente par défaut.</div>
+            <div class="tool-card-desc">Web public + Google Search, YouTube, Maps, Gmail anonymisé, avantage exclusif. Connexion web native et permanente par défaut.</div>
           </div>
           <div class="tool-card">
             <div class="tool-card-name">Copilot <span class="tool-badge badge-us">US</span></div>
@@ -1242,7 +1695,7 @@
           </div>
           <div class="tool-card">
             <div class="tool-card-name">Perplexity <span class="tool-badge badge-us">US</span></div>
-            <div class="tool-card-desc">Pas de modèle propre — surcouche sur GPT-5, Claude ou Gemini avec recherche web systématique. 100 % temps réel, chaque affirmation = un lien cliquable.</div>
+            <div class="tool-card-desc">Pas de modèle propre : surcouche sur GPT-5, Claude ou Gemini avec recherche web systématique. 100 % temps réel, chaque affirmation = un lien cliquable.</div>
           </div>
           <div class="tool-card">
             <div class="tool-card-name">Le Chat <span class="tool-badge badge-fr">🇫🇷</span></div>
@@ -1250,7 +1703,7 @@
           </div>
           <div class="tool-card">
             <div class="tool-card-name">Poe <span class="tool-badge badge-us">US</span></div>
-            <div class="tool-card-desc">Interface multi-modèles — accède à GPT-5, Claude, Gemini, Llama, 100+ modèles. Pas de données propres.</div>
+            <div class="tool-card-desc">Interface multi-modèles : accède à GPT-5, Claude, Gemini, Llama, 100+ modèles. Pas de données propres.</div>
           </div>
         </div>
 
@@ -1268,7 +1721,7 @@
             <span class="scenario-tool tool-claude">Claude (200k tokens)</span>
           </div>
           <div class="scenario-row">
-            <div class="scenario-task">Données sensibles — Europe</div>
+            <div class="scenario-task">Données sensibles, Europe</div>
             <span class="scenario-tool tool-lechat">Le Chat 🇫🇷</span>
           </div>
           <div class="scenario-row">
@@ -1283,8 +1736,8 @@
       ═══════════════════════════════════════════ -->
       <div class="page" id="page-chatgpt">
         <div class="module-hero">
-          <div class="module-tag">Module 2 — ChatGPT</div>
-          <h1 class="module-title">ChatGPT — <em>GPT-5</em></h1>
+          <div class="module-tag">Module 2 : ChatGPT</div>
+          <h1 class="module-title">ChatGPT, <em>GPT-5</em></h1>
           <p class="module-desc">L'outil le plus polyvalent du marché. Exceptionnel pour la génération de texte, la créativité et le code. Moins fiable sur les données chiffrées sans outil dédié.</p>
         </div>
 
@@ -1293,7 +1746,7 @@
             <h3>Où il excelle</h3>
             <ul class="checklist" style="margin-top:12px;">
               <li>Génération de texte : articles, mémos, communiqués, reformulation, titres</li>
-              <li>Traduction — un des meilleurs outils disponibles</li>
+              <li>Traduction : un des meilleurs outils disponibles</li>
               <li>Code : CSS, Python, formules Excel</li>
               <li>Idées créatives, angles éditoriaux, variants A/B</li>
               <li>Synthèse d'un document long ou en langue étrangère</li>
@@ -1303,9 +1756,9 @@
           <div class="dont-block">
             <h3>Où il échoue ou dégrade</h3>
             <ul class="checklist" style="margin-top:12px;">
-              <li>Tâches complexes traitées d'un seul bloc — mieux vaut découper en étapes séquentielles</li>
-              <li>Analyse de données chiffrées sans outil dédié — peu fiable</li>
-              <li>Sujets très spécialisés — si vous ne connaissez pas le domaine, vous ne pouvez pas détecter ses erreurs</li>
+              <li>Tâches complexes traitées d'un seul bloc : mieux vaut découper en étapes séquentielles</li>
+              <li>Analyse de données chiffrées sans outil dédié : peu fiable</li>
+              <li>Sujets très spécialisés : si vous ne connaissez pas le domaine, vous ne pouvez pas détecter ses erreurs</li>
             </ul>
           </div>
         </div>
@@ -1321,19 +1774,19 @@
       ═══════════════════════════════════════════ -->
       <div class="page" id="page-claude">
         <div class="module-hero">
-          <div class="module-tag">Module 3 — Claude</div>
-          <h1 class="module-title">Claude — <em>Opus 4.6</em></h1>
-          <p class="module-desc">Le plus rigoureux sur l'analyse longue. Signale ses incertitudes, résiste aux instructions contradictoires. Fenêtre de 200 000 tokens — l'équivalent de 2 romans denses en une session.</p>
+          <div class="module-tag">Module 3 : Claude</div>
+          <h1 class="module-title">Claude, <em>Opus 4.6</em></h1>
+          <p class="module-desc">Le plus rigoureux sur l'analyse longue. Signale ses incertitudes, résiste aux instructions contradictoires. Fenêtre de 200 000 tokens, l'équivalent de 2 romans denses en une session.</p>
         </div>
 
         <div class="do-dont">
           <div class="do-block">
             <h3>Où il excelle</h3>
             <ul class="checklist" style="margin-top:12px;">
-              <li>Analyse longue et raisonnement complexe — documents, contrats, rapports stratégiques</li>
+              <li>Analyse longue et raisonnement complexe : documents, contrats, rapports stratégiques</li>
               <li>Écrits à fort enjeu : propositions commerciales, mémos, analyses</li>
               <li>Cohérence maintenue sur de très longs textes</li>
-              <li>Résiste aux instructions contradictoires — signale ses incertitudes</li>
+              <li>Résiste aux instructions contradictoires, signale ses incertitudes</li>
               <li>Balises XML pour séparer instruction et données</li>
               <li>Projects pour un contexte persistant d'équipe</li>
             </ul>
@@ -1341,9 +1794,9 @@
           <div class="dont-block">
             <h3>Où il échoue ou dégrade</h3>
             <ul class="checklist" style="margin-top:12px;">
-              <li>Génération d'images ou multimédia — utiliser ChatGPT (DALL-E) ou Gemini</li>
-              <li>Validation de conclusions préétablies — il résistera. Préférer : «&nbsp;Joue l'avocat du diable.&nbsp;»</li>
-              <li>Intensifieurs vides dans vos prompts («&nbsp;crucial&nbsp;», «&nbsp;essentiel&nbsp;») — aucun effet</li>
+              <li>Génération d'images ou multimédia : utiliser ChatGPT (DALL-E) ou Gemini</li>
+              <li>Validation de conclusions préétablies : il résistera. Préférer : «&nbsp;Joue l'avocat du diable.&nbsp;»</li>
+              <li>Intensifieurs vides dans vos prompts («&nbsp;crucial&nbsp;», «&nbsp;essentiel&nbsp;») : aucun effet</li>
             </ul>
           </div>
         </div>
@@ -1352,7 +1805,7 @@
         <div class="card" style="margin-bottom:14px;">
           <div class="technique-num">✓ Do</div>
           <p style="margin:0;font-size:13.5px;"><strong>Confiez-lui vos documents longs avec balises XML.</strong><br>
-          Exemple&nbsp;: <code style="background:var(--cream);padding:2px 6px;border-radius:4px;font-size:12px;">&lt;document&gt;[Votre texte de 50+ pages]&lt;/document&gt;</code> — Identifie les 3 risques stratégiques absents de la conclusion.</p>
+          Exemple&nbsp;: <code style="background:var(--cream);padding:2px 6px;border-radius:4px;font-size:12px;">&lt;document&gt;[Votre texte de 50+ pages]&lt;/document&gt;</code> : Identifie les 3 risques stratégiques absents de la conclusion.</p>
         </div>
         <div class="card" style="margin-bottom:14px;">
           <div class="technique-num">✓ Do</div>
@@ -1362,11 +1815,11 @@
         <div class="card" style="margin-bottom:24px;">
           <div class="technique-num">✓ Do</div>
           <p style="margin:0;font-size:13.5px;"><strong>Utilisez les Projects pour un contexte persistant d'équipe.</strong><br>
-          Créez un Project «&nbsp;Client X&nbsp;» avec le brief, le ton de marque et les livrables — Claude les mémorise pour tous les membres.</p>
+          Créez un Project «&nbsp;Client X&nbsp;» avec le brief, le ton de marque et les livrables : Claude les mémorise pour tous les membres.</p>
         </div>
 
         <div class="warn-box">
-          ⚠️ Ne demandez pas d'images ou de vidéos à Claude — il est centré texte et code. Pour les tâches multimodales créatives, utilisez ChatGPT (DALL-E) ou Gemini.
+          ⚠️ Ne demandez pas d'images ou de vidéos à Claude : il est centré texte et code. Pour les tâches multimodales créatives, utilisez ChatGPT (DALL-E) ou Gemini.
         </div>
       </div>
 
@@ -1375,17 +1828,17 @@
       ═══════════════════════════════════════════ -->
       <div class="page" id="page-gemini">
         <div class="module-hero">
-          <div class="module-tag">Module 4 — Gemini</div>
-          <h1 class="module-title">Gemini — <em>2.5 Pro</em></h1>
-          <p class="module-desc">L'outil de référence dans Google Workspace. Lit vos fichiers Drive, Gmail, Docs directement — sans copier-coller. Son avantage est dans l'intégration native, pas dans l'usage hors écosystème.</p>
+          <div class="module-tag">Module 4 : Gemini</div>
+          <h1 class="module-title">Gemini, <em>2.5 Pro</em></h1>
+          <p class="module-desc">L'outil de référence dans Google Workspace. Lit vos fichiers Drive, Gmail, Docs directement, sans copier-coller. Son avantage est dans l'intégration native, pas dans l'usage hors écosystème.</p>
         </div>
 
         <div class="do-dont">
           <div class="do-block">
             <h3>Où il excelle</h3>
             <ul class="checklist" style="margin-top:12px;">
-              <li>Travail natif dans Google Workspace — Gmail, Docs, Drive, Sheets sans friction</li>
-              <li>Corpus volumineux — avale des corpus entiers sans tronquer</li>
+              <li>Travail natif dans Google Workspace : Gmail, Docs, Drive, Sheets sans friction</li>
+              <li>Corpus volumineux : avale des corpus entiers sans tronquer</li>
               <li>Données Google exclusives (Search, YouTube, Maps, Gmail)</li>
               <li>Connexion web native permanente par défaut</li>
             </ul>
@@ -1393,8 +1846,8 @@
           <div class="dont-block">
             <h3>Où il échoue ou dégrade</h3>
             <ul class="checklist" style="margin-top:12px;">
-              <li>Hors écosystème Google sans raison — ChatGPT ou Claude offrent une meilleure expérience conversationnelle</li>
-              <li>Données sensibles sur version gratuite — utiliser Workspace Business/Enterprise</li>
+              <li>Hors écosystème Google sans raison : ChatGPT ou Claude offrent une meilleure expérience conversationnelle</li>
+              <li>Données sensibles sur version gratuite : utiliser Workspace Business/Enterprise</li>
               <li>Supposer qu'il est à jour sans activer la recherche web</li>
             </ul>
           </div>
@@ -1402,7 +1855,7 @@
 
         <div class="tip-box">
           <strong>💡 Astuce pratique</strong>
-          Dans Google Docs, tapez <strong>@Gemini</strong> pour invoquer l'IA directement dans votre document. Dans Sheets, Gemini analyse vos données en contexte réel — aucune exportation nécessaire.
+          Dans Google Docs, tapez <strong>@Gemini</strong> pour invoquer l'IA directement dans votre document. Dans Sheets, Gemini analyse vos données en contexte réel, aucune exportation nécessaire.
         </div>
       </div>
 
@@ -1411,16 +1864,16 @@
       ═══════════════════════════════════════════ -->
       <div class="page" id="page-copilot">
         <div class="module-hero">
-          <div class="module-tag">Module 5 — Microsoft Copilot</div>
+          <div class="module-tag">Module 5 : Microsoft Copilot</div>
           <h1 class="module-title">Microsoft <em>Copilot</em></h1>
-          <p class="module-desc">L'outil qui transforme vos données Microsoft 365 en actions — emails, fichiers, réunions, données internes. Sa valeur est conditionnée au plan M365 payant.</p>
+          <p class="module-desc">L'outil qui transforme vos données Microsoft 365 en actions : emails, fichiers, réunions, données internes. Sa valeur est conditionnée au plan M365 payant.</p>
         </div>
 
         <div class="do-dont">
           <div class="do-block">
             <h3>Où il excelle</h3>
             <ul class="checklist" style="margin-top:12px;">
-              <li>Exploitation de vos données M365 — fichiers, emails Teams, SharePoint (plan payant)</li>
+              <li>Exploitation de vos données M365 : fichiers, emails Teams, SharePoint (plan payant)</li>
               <li>Synthèse de réunions Teams avec critères précis (décisions, actions, responsables)</li>
               <li>Rédaction d'emails depuis un brief bullet points</li>
               <li>Analyse Excel en contexte réel</li>
@@ -1429,8 +1882,8 @@
           <div class="dont-block">
             <h3>Où il échoue ou dégrade</h3>
             <ul class="checklist" style="margin-top:12px;">
-              <li>Brainstorming créatif général — ChatGPT ou Claude sont mieux adaptés</li>
-              <li>Usage sans formation initiale — taux d'adoption très faible sans onboarding</li>
+              <li>Brainstorming créatif général : ChatGPT ou Claude sont mieux adaptés</li>
+              <li>Usage sans formation initiale : taux d'adoption très faible sans onboarding</li>
               <li>Supposer que la version gratuite accède à vos données (elle ne le fait pas)</li>
             </ul>
           </div>
@@ -1438,7 +1891,7 @@
 
         <div class="warn-box">
           <strong>⚠️ Point clé</strong>
-          L'accès aux données internes nécessite le plan <strong>M365 Copilot payant (30 $/mois/utilisateur)</strong>. La version gratuite ne lit pas vos fichiers. Prévoir 2h de formation par profil d'usage — les gains de productivité arrivent après la maîtrise.
+          L'accès aux données internes nécessite le plan <strong>M365 Copilot payant (30 $/mois/utilisateur)</strong>. La version gratuite ne lit pas vos fichiers. Prévoir 2h de formation par profil d'usage : les gains de productivité arrivent après la maîtrise.
         </div>
       </div>
 
@@ -1447,8 +1900,8 @@
       ═══════════════════════════════════════════ -->
       <div class="page" id="page-perplexity">
         <div class="module-hero">
-          <div class="module-tag">Module 6 — Perplexity</div>
-          <h1 class="module-title">Perplexity — <em>moteur IA sourcé</em></h1>
+          <div class="module-tag">Module 6 : Perplexity</div>
+          <h1 class="module-title">Perplexity, <em>moteur IA sourcé</em></h1>
           <p class="module-desc">Chaque affirmation est sourcée, chaque source est vérifiable en un clic. Incomparable pour la veille factuelle. Pas conçu pour rédiger ou créer du contenu.</p>
         </div>
 
@@ -1456,8 +1909,8 @@
           <div class="do-block">
             <h3>Où il excelle</h3>
             <ul class="checklist" style="margin-top:12px;">
-              <li>Recherche factuelle sourcée — veille réglementaire, données chiffrées, études récentes</li>
-              <li>Méthode RAG&nbsp;: «&nbsp;donne l'extrait exact et le lien&nbsp;» — limite les hallucinations</li>
+              <li>Recherche factuelle sourcée : veille réglementaire, données chiffrées, études récentes</li>
+              <li>Méthode RAG&nbsp;: «&nbsp;donne l'extrait exact et le lien&nbsp;» : limite les hallucinations</li>
               <li>Spaces pour une veille thématique organisée et partageable en équipe</li>
               <li>Mode Pro&nbsp;: accès à GPT-5 et Claude Opus dans une interface sourcée</li>
             </ul>
@@ -1465,9 +1918,9 @@
           <div class="dont-block">
             <h3>Où il échoue ou dégrade</h3>
             <ul class="checklist" style="margin-top:12px;">
-              <li>Rédaction ou création de contenu — utiliser ChatGPT ou Claude pour ça</li>
-              <li>Stratégie ou idéation — pas conçu pour ça</li>
-              <li>Citer une source sans l'avoir ouverte — Perplexity peut mal interpréter ou citer une source qui contredit l'affirmation</li>
+              <li>Rédaction ou création de contenu : utiliser ChatGPT ou Claude pour ça</li>
+              <li>Stratégie ou idéation : pas conçu pour ça</li>
+              <li>Citer une source sans l'avoir ouverte : Perplexity peut mal interpréter ou citer une source qui contredit l'affirmation</li>
             </ul>
           </div>
         </div>
@@ -1483,8 +1936,8 @@
       ═══════════════════════════════════════════ -->
       <div class="page" id="page-lechat">
         <div class="module-hero">
-          <div class="module-tag">Module 7 — Le Chat · Mistral AI 🇫🇷</div>
-          <h1 class="module-title">Le Chat — <em>souverain européen</em></h1>
+          <div class="module-tag">Module 7 : Le Chat · Mistral AI 🇫🇷</div>
+          <h1 class="module-title">Le Chat, <em>souverain européen</em></h1>
           <p class="module-desc">Seul outil souverain de ce comparatif. Données hébergées en Europe, RGPD natif, mémoire persistante, génération à ~1 000 mots/seconde.</p>
         </div>
 
@@ -1492,24 +1945,24 @@
           <div class="do-block">
             <h3>Où il excelle</h3>
             <ul class="checklist" style="margin-top:12px;">
-              <li>Contenus sensibles et conformité RGPD — contrats, RH, finances, données patients</li>
-              <li>Tâches répétitives en volume — le plus rapide du comparatif (~1 000 mots/s)</li>
-              <li>Mémoire persistante entre sessions — le contexte métier n'a pas besoin d'être répété</li>
+              <li>Contenus sensibles et conformité RGPD : contrats, RH, finances, données patients</li>
+              <li>Tâches répétitives en volume : le plus rapide du comparatif (~1 000 mots/s)</li>
+              <li>Mémoire persistante entre sessions : le contexte métier n'a pas besoin d'être répété</li>
               <li>Version Pro&nbsp;: partenariat AFP pour les actualités vérifiées en temps réel</li>
             </ul>
           </div>
           <div class="dont-block">
             <h3>Où il échoue ou dégrade</h3>
             <ul class="checklist" style="margin-top:12px;">
-              <li>Écosystème de plugins — moins étendu que le GPT Store, encore en développement</li>
-              <li>Prompts vagues ou rhétoriques («&nbsp;Dans un monde qui s'accélère…&nbsp;») — contre-productif sur tous les outils, mais particulièrement inutile ici</li>
+              <li>Écosystème de plugins : moins étendu que le GPT Store, encore en développement</li>
+              <li>Prompts vagues ou rhétoriques («&nbsp;Dans un monde qui s'accélère…&nbsp;») : contre-productif sur tous les outils, mais particulièrement inutile ici</li>
             </ul>
           </div>
         </div>
 
         <div class="info-box">
           <strong>🇫🇷 Seul outil souverain européen</strong>
-          Mistral AI, Paris. Hébergement EU garanti, RGPD natif — sans configuration supplémentaire. <strong>Aucune loi américaine ne s'applique.</strong><br><br>
+          Mistral AI, Paris. Hébergement EU garanti, RGPD natif, sans configuration supplémentaire. <strong>Aucune loi américaine ne s'applique.</strong><br><br>
           ⚠️ Version gratuite&nbsp;: vérifiez la désactivation du partage de données → Paramètres → Préférences → décocher «&nbsp;Autoriser l'utilisation de vos interactions&nbsp;».<br><br>
           🎁 Free Mobile&nbsp;: 12 mois Pro offerts aux abonnés.
         </div>
@@ -1520,8 +1973,8 @@
       ═══════════════════════════════════════════ -->
       <div class="page" id="page-poe">
         <div class="module-hero">
-          <div class="module-tag">Module 8 — Poe (Quora)</div>
-          <h1 class="module-title">Poe — <em>100+ modèles</em></h1>
+          <div class="module-tag">Module 8 : Poe (Quora)</div>
+          <h1 class="module-title">Poe, <em>100+ modèles</em></h1>
           <p class="module-desc">L'interface unique qui donne accès à ChatGPT, Claude, Gemini, Llama et plus de 100 modèles dans une seule app, avec un abonnement unique.</p>
         </div>
 
@@ -1529,7 +1982,7 @@
           <div class="do-block">
             <h3>Où il excelle</h3>
             <ul class="checklist" style="margin-top:12px;">
-              <li>Comparer plusieurs modèles sur la même question — idéal pour choisir le meilleur modèle pour une tâche récurrente</li>
+              <li>Comparer plusieurs modèles sur la même question : idéal pour choisir le meilleur modèle pour une tâche récurrente</li>
               <li>Bots partageables avec contexte d'équipe (ex.&nbsp;: bot «&nbsp;Relecteur édito&nbsp;» partagé en un lien)</li>
               <li>Accès à 100+ modèles dont des modèles open source (Llama, gratuit)</li>
             </ul>
@@ -1537,9 +1990,9 @@
           <div class="dont-block">
             <h3>Où il échoue ou dégrade</h3>
             <ul class="checklist" style="margin-top:12px;">
-              <li>Si vous n'utilisez qu'un seul modèle — l'abonnement direct est plus économique et donne accès à plus de fonctions avancées</li>
-              <li>Données confidentielles — double exposition (Poe + l'IA utilisée)</li>
-              <li>Fonctions avancées d'un outil (mémoire Claude, Projects, GPTs personnalisés) — Poe donne l'accès, pas l'écosystème</li>
+              <li>Si vous n'utilisez qu'un seul modèle : l'abonnement direct est plus économique et donne accès à plus de fonctions avancées</li>
+              <li>Données confidentielles : double exposition (Poe + l'IA utilisée)</li>
+              <li>Fonctions avancées d'un outil (mémoire Claude, Projects, GPTs personnalisés) : Poe donne l'accès, pas l'écosystème</li>
             </ul>
           </div>
         </div>
@@ -1556,47 +2009,236 @@
       <div class="page" id="page-scenarios">
         <div class="module-hero">
           <div class="module-tag">Choisir</div>
-          <h1 class="module-title">Quel outil pour <em>quelle situation</em></h1>
-          <p class="module-desc">Un tableau de décision rapide. La règle d'or&nbsp;: choisir l'outil selon la tâche, pas selon l'habitude.</p>
+          <h1 class="module-title">Situations <em>générales</em></h1>
+          <p class="module-desc">Choisir l'outil selon la tâche, pas selon l'habitude. La sensibilité des données est le second critère. Les points d'attention sont accessibles via le bouton <strong>i</strong> de chaque ligne.</p>
         </div>
 
-        <div class="scenario-list">
-          <div class="scenario-row">
-            <div class="scenario-task">Rédiger un contenu avec données sensibles (RH, contrat, finance)</div>
-            <span class="scenario-tool tool-lechat">Le Chat 🇫🇷</span>
+        <div class="info-box" style="margin-bottom:24px;">
+          <strong>3 réflexes avant de choisir</strong>
+          1. Nature de la demande : comprendre, produire, vérifier, analyser. &nbsp;
+          2. Sensibilité des données : <span class="sens sens-low">Faible</span> <span class="sens sens-mid">Moyenne</span> <span class="sens sens-high">Forte</span>. &nbsp;
+          3. Contexte technique : Google Workspace, Microsoft 365, ou navigateur.
+        </div>
+
+        <div class="sit-search-wrap">
+          <span class="sit-search-icon">🔍</span>
+          <input class="sit-search" id="search-gen" type="text" placeholder="Filtrer par mot-clé : traduction, contrat, veille, Excel, RGPD..." autocomplete="off" oninput="filterTable('gen', this.value)">
+          <span class="sit-search-count" id="count-gen"></span>
+        </div>
+        <div class="sit-no-results" id="noresult-gen">Aucune situation ne correspond à votre recherche.</div>
+
+        <!-- RECHERCHE -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Recherche d'informations</div>
+          <div class="sit-row">
+            <div class="sit-situation">Vérifier un fait précis, une date, un chiffre récent</div>
+            <span class="sens sens-low">Faible</span>
+            <span class="sit-tool tool-perplexity">Perplexity</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Ouvrir les sources avant de publier, certaines nuancent ou contredisent la synthèse.</li><li>Demander si besoin : « donne l'extrait exact et le lien ».</li><li>Informations à jour à la date de rédaction (2026).</li></ul></div></button>
           </div>
-          <div class="scenario-row">
-            <div class="scenario-task">Analyser un long rapport ou document complexe (50+ pages)</div>
-            <span class="scenario-tool tool-claude">Claude</span>
+          <div class="sit-row">
+            <div class="sit-situation">Recherche bibliographique ou académique (études, rapports, publications)</div>
+            <span class="sens sens-low">Faible</span>
+            <span class="sit-tool tool-perplexity">Perplexity</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Préciser les critères : ex. « 3 études publiées après 2022, auteur et date ».</li><li>Plus structuré qu'une recherche web classique, mais la couverture dépend des sources indexées.</li></ul></div></button>
           </div>
-          <div class="scenario-row">
-            <div class="scenario-task">Vérifier un fait, trouver une source récente, faire de la veille</div>
-            <span class="scenario-tool tool-perplexity">Perplexity</span>
+          <div class="sit-row">
+            <div class="sit-situation">Veille thématique continue (secteur, réglementation, concurrence)</div>
+            <span class="sens sens-low">Faible</span>
+            <span class="sit-tool tool-perplexity">Perplexity</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Spaces pour organiser par thème et partager en équipe, chaque mise à jour sourcée.</li><li>Adapté à la collecte factuelle, ne pas l'utiliser seul pour des décisions stratégiques.</li></ul></div></button>
           </div>
-          <div class="scenario-row">
-            <div class="scenario-task">Brainstorming, création de contenu, images, variantes A/B</div>
-            <span class="scenario-tool tool-chatgpt">ChatGPT</span>
+          <div class="sit-row">
+            <div class="sit-situation">Question sur un concept, un mécanisme, un sujet peu familier</div>
+            <span class="sens sens-low">Faible</span>
+            <span class="sit-tool tool-chatgpt">ChatGPT</span>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Pour les faits vérifiables (chiffres, dates, lois) : compléter avec Perplexity ou un outil connecté au web.</li><li>Vérifier les sources avant de diffuser.</li></ul></div></button>
           </div>
-          <div class="scenario-row">
-            <div class="scenario-task">Travailler sur un fichier Gmail / Docs / Sheets</div>
-            <span class="scenario-tool tool-gemini">Gemini</span>
+          <div class="sit-row">
+            <div class="sit-situation">Actualité très récente (&lt; 48h)</div>
+            <span class="sens sens-low">Faible</span>
+            <span class="sit-tool tool-perplexity">Perplexity</span>
+            <span class="sit-tool tool-lechat">Le Chat Pro</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Vérifier qu'un accès web est actif, sans connexion les modèles sont limités à leur date de coupure.</li><li>Le Chat Pro s'appuie sur des flux d'actualités vérifiés (AFP).</li></ul></div></button>
           </div>
-          <div class="scenario-row">
-            <div class="scenario-task">Exploiter des emails, fichiers Teams ou données internes M365</div>
-            <span class="scenario-tool tool-copilot">Copilot</span>
+          <div class="sit-row">
+            <div class="sit-situation">Benchmark concurrentiel ou comparaison de solutions du marché</div>
+            <span class="sens sens-mid">Moyenne</span>
+            <span class="sit-tool tool-perplexity">Perplexity</span>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Perplexity pour les données récentes, Claude pour structurer l'analyse et formuler les conclusions.</li><li>Compléter par vérification manuelle sur les sites et documents officiels.</li></ul></div></button>
           </div>
-          <div class="scenario-row">
-            <div class="scenario-task">Synthèse stratégique, analyse critique, raisonnement long</div>
-            <span class="scenario-tool tool-claude">Claude</span>
+        </div>
+
+        <!-- RÉDACTION -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Rédaction</div>
+          <div class="sit-row">
+            <div class="sit-situation">Article, email, communiqué, billet de blog</div>
+            <span class="sens sens-mid">Moyenne</span>
+            <span class="sit-tool tool-chatgpt">ChatGPT</span>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Travailler le prompt (contexte, cible, ton) est plus efficace que corriger un brouillon IA.</li><li>Claude pour les textes longs ou nécessitant une cohérence sur plusieurs documents.</li></ul></div></button>
           </div>
-          <div class="scenario-row">
-            <div class="scenario-task">Traduction et internationalisation de contenus en volume</div>
-            <span class="scenario-tool tool-lechat">Le Chat</span>
-            <span class="scenario-tool tool-chatgpt">ChatGPT</span>
+          <div class="sit-row">
+            <div class="sit-situation">Document à fort enjeu (proposition commerciale, mémo stratégique, rapport)</div>
+            <span class="sens sens-mid">Moyenne</span>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Demander explicitement de « jouer l'avocat du diable » avant finalisation.</li><li>Projects (Claude) pour un contexte persistant d'équipe.</li><li>Éviter les données très sensibles en version grand public.</li></ul></div></button>
           </div>
-          <div class="scenario-row">
-            <div class="scenario-task">Tester et comparer plusieurs IA — accès à 100+ modèles</div>
-            <span class="scenario-tool tool-poe">Poe</span>
+          <div class="sit-row">
+            <div class="sit-situation">Traduction (document, email, interface, contenu multilingue)</div>
+            <span class="sens sens-mid">Moyenne</span>
+            <span class="sit-tool tool-chatgpt">ChatGPT</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Préciser la cible : ton formel/informel, variante de langue.</li><li>Pour les documents contractuels : environnement sous DPA ou Le Chat et relecture humaine.</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Reformulation, simplification, adaptation à une cible ou un format</div>
+            <span class="sens sens-mid">Moyenne</span>
+            <span class="sit-tool tool-chatgpt">ChatGPT</span>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Claude maintient mieux une ligne éditoriale cohérente sur plusieurs documents.</li><li>Relire pour vérifier la fidélité au message d'origine.</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Reformulation en volume (séries de posts, fiches produits, emails types)</div>
+            <span class="sens sens-mid">Moyenne</span>
+            <span class="sit-tool tool-lechat">Le Chat</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Mémoire persistante entre sessions : le contexte métier n'a pas besoin d'être répété.</li><li>Version gratuite : désactiver le partage de données (Paramètres &gt; Préférences).</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Préparer une présentation (structure, messages clés, plan de slides)</div>
+            <span class="sens sens-mid">Moyenne</span>
+            <span class="sit-tool tool-claude">Claude</span>
+            <span class="sit-tool tool-chatgpt">ChatGPT</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Produit le plan, les messages clés et le texte des slides.</li><li>La mise en forme visuelle reste à faire dans PowerPoint, Slides, Canva, etc.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- ANALYSE -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Analyse</div>
+          <div class="sit-row">
+            <div class="sit-situation">Synthèse d'un document long (contrat, rapport, étude, 50+ pages)</div>
+            <span class="sens sens-high">Forte</span>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Documents sensibles : utiliser une version Enterprise ou un environnement validé par la DSI.</li><li>Relire la synthèse ; pour les contrats, faire valider par un juriste.</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Analyser un corpus de documents (plusieurs fichiers, plusieurs sources)</div>
+            <span class="sens sens-high">Forte</span>
+            <span class="sit-tool tool-claude">Claude</span>
+            <span class="sit-tool tool-gemini">Gemini</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Claude : coller les documents dans la même session.</li><li>Gemini : intégration native si les fichiers sont dans Google Drive.</li><li>Corpus sensibles : solutions validées par l'IT.</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Structurer une réflexion complexe, formuler les bonnes questions</div>
+            <span class="sens sens-mid">Moyenne</span>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Demander d'abord le raisonnement, puis la recommandation, pour des résultats plus transparents.</li><li>La décision finale reste à l'utilisateur.</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Synthétiser une réunion ou un long échange d'emails</div>
+            <span class="sens sens-high">Forte</span>
+            <span class="sit-tool tool-claude">Claude</span>
+            <span class="sit-tool tool-copilot">Copilot</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Copilot (M365 payant) : synthèse automatique Teams et Outlook.</li><li>Claude : coller la transcription dans l'interface.</li><li>Données clients ou RH : vérifier les garanties contractuelles avant usage.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- CODE & DONNÉES -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Code & données chiffrées</div>
+          <div class="sit-row">
+            <div class="sit-situation">Écrire ou déboguer du code (Python, JavaScript, SQL, VBA, formules Excel)</div>
+            <span class="sens sens-mid">Moyenne</span>
+            <span class="sit-tool tool-chatgpt">ChatGPT</span>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Tester le code dans un environnement contrôlé avant toute mise en production.</li><li>ChatGPT pour les snippets rapides ; Claude pour les projets plus longs.</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Analyser des données chiffrées dans un tableur (Excel)</div>
+            <span class="sens sens-high">Forte</span>
+            <span class="sit-tool tool-copilot">Copilot</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Copilot dans Excel analyse directement le fichier, sans export. Licence M365 payante requise.</li><li>Sans licence : export vers un modèle généraliste possible, avec vigilance sur la confidentialité.</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Analyser des données volumineuses dans Google Sheets</div>
+            <span class="sens sens-high">Forte</span>
+            <span class="sit-tool tool-gemini">Gemini</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Analyse directement dans Sheets, sans copier-coller ni export.</li><li>Pertinent si l'organisation est déjà centrée sur Google Workspace.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- INTÉGRATION ÉCOSYSTÈME -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Intégration écosystème</div>
+          <div class="sit-row">
+            <div class="sit-situation">Travailler dans Google Workspace (Gmail, Docs, Drive, Sheets)</div>
+            <span class="sens sens-mid">Moyenne</span>
+            <span class="sit-tool tool-gemini">Gemini</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Intégration native dans Gmail, Docs, Sheets, sans sortir de l'écosystème.</li><li>Activer la connexion web avant toute question sur l'actualité récente.</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Travailler dans Microsoft 365 (Outlook, Teams, Word, Excel, SharePoint)</div>
+            <span class="sens sens-mid">Moyenne</span>
+            <span class="sit-tool tool-copilot">Copilot</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>L'accès aux données internes nécessite la licence M365 payante (30 $/user/mois).</li><li>La version gratuite reste limitée sur les fichiers internes.</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Tester et comparer plusieurs modèles IA sur une même tâche</div>
+            <span class="sens sens-low">Faible</span>
+            <span class="sit-tool tool-poe">Poe</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Utile pour comparer les forces de chaque modèle sur une même tâche.</li><li>Données sensibles : utiliser les interfaces officielles des fournisseurs.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- DONNÉES SENSIBLES -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Données sensibles & conformité</div>
+          <div class="sit-row">
+            <div class="sit-situation">Traiter des documents confidentiels (RH, contrats clients, données financières)</div>
+            <span class="sens sens-high">Forte</span>
+            <span class="sit-tool tool-lechat">Le Chat</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Le Chat : hébergement Europe, RGPD natif par défaut.</li><li>Autres outils en version Enterprise : valider les DPA avec l'IT avant toute exposition de données sensibles.</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Utiliser l'IA sur des données M365 internes sans les exposer à l'extérieur</div>
+            <span class="sens sens-high">Forte</span>
+            <span class="sit-tool tool-copilot">Copilot Enterprise</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Conçu pour exploiter les données internes sans les utiliser pour entraîner les modèles.</li><li>Nécessite une décision d'entreprise et un cadrage IT.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- VOLUME & AUTRES -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Volume, formation & idéation</div>
+          <div class="sit-row">
+            <div class="sit-situation">Tâches répétitives en grand volume (traductions de masse, reformulation de séries)</div>
+            <span class="sens sens-mid">Moyenne</span>
+            <span class="sit-tool tool-lechat">Le Chat</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Très rapide pour des séries de textes similaires.</li><li>Limiter l'exposition de contenus confidentiels ; adapter les réglages de confidentialité.</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Apprendre un nouveau sujet, comprendre un concept</div>
+            <span class="sens sens-low">Faible</span>
+            <span class="sit-tool tool-chatgpt">ChatGPT</span>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Explications progressives, exemples et quiz à la demande.</li><li>Pour des formations certifiantes : compléter par des ressources de référence.</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Idéation créative, génération d'angles, exploration d'hypothèses</div>
+            <span class="sens sens-low">Faible</span>
+            <span class="sit-tool tool-chatgpt">ChatGPT</span>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>ChatGPT : volume d'idées et exploration d'angles variés.</li><li>Claude : transformer le brainstorming en plan ou texte long dans la même session.</li><li>Les idées produites doivent être filtrées et sélectionnées par l'équipe.</li></ul></div></button>
+          </div>
+          <div class="sit-row">
+            <div class="sit-situation">Créer des bots ou assistants IA partagés avec une équipe</div>
+            <span class="sens sens-mid">Moyenne</span>
+            <span class="sit-tool tool-poe">Poe</span>
+            <span class="sit-tool tool-chatgpt">ChatGPT</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Poe : bots partageables via lien, avec un contexte commun d'équipe.</li><li>ChatGPT (plan Plus+) : assistants personnalisés avec instructions permanentes.</li><li>Données sensibles : solutions officielles validées par l'organisation uniquement.</li></ul></div></button>
           </div>
         </div>
 
@@ -1613,28 +2255,28 @@
         <div class="module-hero">
           <div class="module-tag">Choisir</div>
           <h1 class="module-title">Confidentialité <em>&amp; RGPD</em></h1>
-          <p class="module-desc">État des lieux — mars 2026. Traitez chaque outil comme une conversation publique&nbsp;: ne tapez rien que vous ne seriez pas à l'aise de voir apparaître dans la réponse d'un autre utilisateur.</p>
+          <p class="module-desc">État des lieux, mars 2026. Traitez chaque outil comme une conversation publique&nbsp;: ne tapez rien que vous ne seriez pas à l'aise de voir apparaître dans la réponse d'un autre utilisateur.</p>
         </div>
 
         <div class="conf-grid">
           <div class="conf-card">
             <div class="conf-tool">ChatGPT · OpenAI</div>
             <div class="conf-row"><span class="conf-label">Hébergement</span><span class="conf-val">Serveurs US · OpenAI Ireland (UE)</span></div>
-            <div class="conf-row"><span class="conf-label">Gratuit</span><span class="conf-val rgpd-warn">⚠️ Peut être réutilisé pour entraîner le modèle — désactiver dans Paramètres → Gestion des données</span></div>
+            <div class="conf-row"><span class="conf-label">Gratuit</span><span class="conf-val rgpd-warn">⚠️ Peut être réutilisé pour entraîner le modèle : désactiver dans Paramètres → Gestion des données</span></div>
             <div class="conf-row"><span class="conf-label">Payant</span><span class="conf-val rgpd-ok">✓ Team/Enterprise : vos textes ne servent pas à l'entraînement</span></div>
             <div class="conf-row"><span class="conf-label">Norme</span><span class="conf-val">SOC 2 · ISO 27001 · Cloud Act US</span></div>
           </div>
           <div class="conf-card">
             <div class="conf-tool">Claude · Anthropic</div>
             <div class="conf-row"><span class="conf-label">Hébergement</span><span class="conf-val">Serveurs US (AWS)</span></div>
-            <div class="conf-row"><span class="conf-label">Gratuit</span><span class="conf-val rgpd-warn">⚠️ Peut servir à entraîner le modèle — désactiver dans les paramètres du compte</span></div>
+            <div class="conf-row"><span class="conf-label">Gratuit</span><span class="conf-val rgpd-warn">⚠️ Peut servir à entraîner le modèle : désactiver dans les paramètres du compte</span></div>
             <div class="conf-row"><span class="conf-label">Payant</span><span class="conf-val rgpd-ok">✓ Pro, Team, Enterprise : vos textes ne servent pas à l'entraînement</span></div>
             <div class="conf-row"><span class="conf-label">Norme</span><span class="conf-val">SOC 2 · Cloud Act US · Pas de représentant légal en Europe</span></div>
           </div>
           <div class="conf-card">
             <div class="conf-tool">Gemini · Google</div>
             <div class="conf-row"><span class="conf-label">Hébergement</span><span class="conf-val">Serveurs US (Google)</span></div>
-            <div class="conf-row"><span class="conf-label">Gratuit</span><span class="conf-val rgpd-warn">⚠️ Désactivable — Paramètres → Préférences → décocher</span></div>
+            <div class="conf-row"><span class="conf-label">Gratuit</span><span class="conf-val rgpd-warn">⚠️ Désactivable : Paramètres → Préférences → décocher</span></div>
             <div class="conf-row"><span class="conf-label">Payant</span><span class="conf-val rgpd-ok">✓ Workspace Business/Enterprise : données exclues de l'entraînement par défaut</span></div>
             <div class="conf-row"><span class="conf-label">Norme</span><span class="conf-val">Cloud Act US · DPA Google disponible</span></div>
           </div>
@@ -1654,7 +2296,7 @@
           </div>
           <div class="conf-card">
             <div class="conf-tool">Le Chat 🇫🇷 · Mistral AI</div>
-            <div class="conf-row"><span class="conf-label">Hébergement</span><span class="conf-val rgpd-ok">🇪🇺 Serveurs en Europe — Paris</span></div>
+            <div class="conf-row"><span class="conf-label">Hébergement</span><span class="conf-val rgpd-ok">🇪🇺 Serveurs en Europe, Paris</span></div>
             <div class="conf-row"><span class="conf-label">RGPD</span><span class="conf-val rgpd-ok">✅ RGPD natif · Hébergement EU garanti · Aucune loi américaine ne s'applique</span></div>
             <div class="conf-row"><span class="conf-label">⚠️ Note</span><span class="conf-val">Seul outil recommandé pour les données sensibles en contexte européen</span></div>
           </div>
@@ -1724,11 +2366,11 @@
         <div class="price-card" style="margin-bottom:24px;">
           <div class="price-card-title">Poe · Quora (multi-modèles)</div>
           <div class="price-row"><span class="price-label">Gratuit</span><span class="price-val price-free">Messages limités par modèle</span></div>
-          <div class="price-row"><span class="price-label">Pro</span><span class="price-val">20 $/mois — messages illimités sur la plupart des modèles</span></div>
+          <div class="price-row"><span class="price-label">Pro</span><span class="price-val">20 $/mois : messages illimités sur la plupart des modèles</span></div>
         </div>
 
         <div class="warn-box">
-          ⚠️ Publicités en test sur les formules gratuites ChatGPT (2026). Ces tarifs sont susceptibles de changer — vérifiez sur les sites officiels avant tout déploiement.
+          ⚠️ Publicités en test sur les formules gratuites ChatGPT (2026). Ces tarifs sont susceptibles de changer : vérifiez sur les sites officiels avant tout déploiement.
         </div>
       </div>
 
@@ -1783,7 +2425,7 @@
         <div class="module-hero">
           <div class="module-tag">Prompting</div>
           <h1 class="module-title">Patterns à <em>éviter</em></h1>
-          <p class="module-desc">Ce que les LLM produisent naturellement — et qui dégrade aussi bien vos prompts que vos textes. Les reconnaître, c'est les supprimer.</p>
+          <p class="module-desc">Ce que les LLM produisent naturellement, et qui dégrade aussi bien vos prompts que vos textes. Les reconnaître, c'est les supprimer.</p>
         </div>
 
         <div class="pattern-list">
@@ -1801,7 +2443,7 @@
           <div class="pattern-card pattern-avoid">
             <div class="pattern-icon">🚫</div>
             <div class="pattern-title">Antithèses binaires</div>
-            <div class="pattern-ex">«&nbsp;Ce n'est pas X — c'est Y&nbsp;» avec emphase typographique</div>
+            <div class="pattern-ex">«&nbsp;Ce n'est pas X, c'est Y&nbsp;» avec emphase typographique</div>
           </div>
           <div class="pattern-card pattern-do">
             <div class="pattern-icon">✓</div>
@@ -1839,7 +2481,7 @@
           <div class="pattern-card pattern-do">
             <div class="pattern-icon">✓</div>
             <div class="pattern-title">Alternative</div>
-            <div class="pattern-ex">Supprimez les balises de navigation — le texte se tient seul.</div>
+            <div class="pattern-ex">Supprimez les balises de navigation : le texte se tient seul.</div>
           </div>
 
           <div class="pattern-card pattern-avoid">
@@ -1878,7 +2520,7 @@
 
         <div class="tip-box">
           <strong>Source</strong>
-          Ces patterns sont tirés de l'analyse «&nbsp;Anatomie d'un texte ChatGPT&nbsp;» — Benoît Raphaël / Génération IA.
+          Ces patterns sont tirés de l'analyse «&nbsp;Anatomie d'un texte ChatGPT&nbsp;», Benoît Raphaël / Génération IA.
         </div>
       </div>
 
@@ -1894,42 +2536,42 @@
 
         <div class="technique-list">
           <div class="technique-card">
-            <div class="technique-num">🔧 Technique 1 — Few-shot</div>
+            <div class="technique-num">🔧 Technique 1 : Few-shot</div>
             <div class="technique-title">Exemples en amont</div>
             <div class="technique-desc">Donnez 2-3 exemples du résultat attendu avant votre demande. Le modèle adopte le style, la structure et le ton de vos exemples.</div>
           </div>
           <div class="technique-card">
-            <div class="technique-num">🔧 Technique 2 — Prefill</div>
+            <div class="technique-num">🔧 Technique 2 : Prefill</div>
             <div class="technique-title">Amorce de réponse</div>
             <div class="technique-desc">Commencez la réponse vous-même. «&nbsp;Voici les 3 raisons principales&nbsp;: 1.&nbsp;» Le modèle continue dans le ton et la structure que vous avez lancés.</div>
           </div>
           <div class="technique-card">
-            <div class="technique-num">🔧 Technique 3 — Auto-évaluation</div>
+            <div class="technique-num">🔧 Technique 3 : Auto-évaluation</div>
             <div class="technique-title">Notation et reformulation</div>
             <div class="technique-desc">Après une réponse&nbsp;: «&nbsp;Note de 1 à 10, puis reformule pour atteindre 9.&nbsp;» Le modèle améliore de lui-même sa sortie.</div>
           </div>
           <div class="technique-card">
-            <div class="technique-num">🔧 Technique 4 — Tree of Thoughts</div>
+            <div class="technique-num">🔧 Technique 4 : Tree of Thoughts</div>
             <div class="technique-title">Explorer avant de développer</div>
             <div class="technique-desc">«&nbsp;Identifie 3 angles possibles, évalue chacun, puis développe le meilleur.&nbsp;» Utile pour trouver des idées ou structurer un texte complexe.</div>
           </div>
           <div class="technique-card">
-            <div class="technique-num">🔧 Technique 5 — NSA</div>
+            <div class="technique-num">🔧 Technique 5 : NSA</div>
             <div class="technique-title">Niveau Supérieur d'Abstraction</div>
             <div class="technique-desc">«&nbsp;Avant de répondre, utilise le NSA&nbsp;: examine l'essence du problème et ses implications larges plutôt que les détails de surface.&nbsp;»</div>
           </div>
           <div class="technique-card">
-            <div class="technique-num">🔧 Technique 6 — Prompting inversé</div>
+            <div class="technique-num">🔧 Technique 6 : Prompting inversé</div>
             <div class="technique-title">L'IA clarifie d'abord</div>
             <div class="technique-desc">«&nbsp;Pose-moi 5 questions (avec exemples de réponse) pour pouvoir rédiger la meilleure réponse possible.&nbsp;» L'IA clarifie avant d'agir.</div>
           </div>
           <div class="technique-card">
-            <div class="technique-num">🔧 Technique 7 — Vérification RAG</div>
+            <div class="technique-num">🔧 Technique 7 : Vérification RAG</div>
             <div class="technique-title">Source + extrait pour chaque affirmation</div>
             <div class="technique-desc">Sur un document&nbsp;: «&nbsp;Pour chaque affirmation, cite l'extrait exact et le numéro de page.&nbsp;» Limite les hallucinations et facilite la vérification.</div>
           </div>
           <div class="technique-card">
-            <div class="technique-num">🔧 Technique 8 — Balises XML</div>
+            <div class="technique-num">🔧 Technique 8 : Balises XML</div>
             <div class="technique-title">Séparer données et instruction</div>
             <div class="technique-desc">Encadrez vos données avec des balises&nbsp;: <code style="font-size:11px;background:var(--cream);padding:1px 5px;border-radius:3px;">&lt;texte&gt;[votre texte]&lt;/texte&gt;</code>. Puis donnez l'instruction. Évite les confusions.</div>
           </div>
@@ -1955,9 +2597,375 @@
         </div>
       </div>
 
-    </div><!-- /content -->
+
+      <!-- ══════════════════════════════════════════
+           PAGE : BRS SITUATIONS
+      ═══════════════════════════════════════════ -->
+      <div class="page" id="page-brs-situations">
+        <div class="module-hero">
+          <div class="module-tag">BRS</div>
+          <h1 class="module-title">Situations <em>BRS</em></h1>
+          <p class="module-desc">Ces situations complètent le tableau général avec les cas spécifiques au courtage maritime chez BRS. Elles ne remplacent ni les procédures internes (confidentialité, compliance, sanctions, KYC), ni la validation par les équipes métier.</p>
+        </div>
+
+        <div class="warn-box">
+          <strong>Rappel</strong>
+          Toutes les données clients, financières ou contractuelles doivent être traitées avec un niveau de prudence maximal, en privilégiant les environnements approuvés par BRS.
+        </div>
+
+        <div class="sit-search-wrap">
+          <span class="sit-search-icon">🔍</span>
+          <input class="sit-search" id="search-brs" type="text" placeholder="Filtrer par mot-clé : charterparty, carbon, fixture, S&P, veille..." autocomplete="off" oninput="filterTable('brs', this.value)">
+          <span class="sit-search-count" id="count-brs"></span>
+        </div>
+        <div class="sit-no-results" id="noresult-brs">Aucune situation ne correspond à votre recherche.</div>
+
+        <!-- BROKING -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Broking : Tanker · Dry Bulk · Chemical · LNG/LPG · Offshore</div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Broking</div>
+            <div class="sit-situation">Rédiger un market update client (newsletter segment)</div>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Alimenter Claude avec les données validées par le desk (chiffres, graphiques, commentaires).</li><li>Ne pas lui demander des chiffres de marché « de zéro » : ils doivent venir des sources internes ou de la veille.</li><li>Relire avant envoi.</li></ul></div></button>
+          </div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Broking</div>
+            <div class="sit-situation">Traduire un fixture recap, une instruction de voyage, un contrat d'affrètement (anglais, français, grec, mandarin...)</div>
+            <span class="sit-tool tool-chatgpt">ChatGPT</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Vérifier la cohérence technique et juridique du résultat.</li><li>Pour les documents contenant des données clients ou contractuelles sensibles, utiliser Le Chat ou une solution Enterprise, ou anonymiser les informations critiques avant usage.</li></ul></div></button>
+          </div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Broking</div>
+            <div class="sit-situation">Préparer une proposition commerciale ou un pitch pour un armateur / chargeur</div>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Utiliser Projects pour conserver le contexte par client.</li><li>Les données sensibles (conditions tarifaires, clauses particulières) ne doivent pas être saisies dans une version grand public.</li><li>Demander à Claude de jouer l'avocat du diable avant finalisation.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- SALE & PURCHASE -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Sale & Purchase</div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Broking / S&P</div>
+            <div class="sit-situation">Rédiger un mémo de transaction ou un résumé de négociation</div>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Fournir explicitement le contexte (navire, parties, conditions).</li><li>La rédaction finale doit être relue par le broker responsable.</li><li>Ne pas saisir de données contractuelles confidentielles dans une version grand public.</li></ul></div></button>
+          </div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">S&P</div>
+            <div class="sit-situation">Analyser et comparer des valeurs de marché navires à partir de données fournies</div>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Claude ne dispose pas de données de marché en temps réel : fournir les chiffres issus des bases internes ou de sources validées.</li><li>L'analyse produite doit être contrôlée par le desk S&P avant toute communication client.</li></ul></div></button>
+          </div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">S&P</div>
+            <div class="sit-situation">Préparer une LOI ou un MoA à partir d'un template BRS</div>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Utiliser uniquement un template BRS fourni explicitement en entrée. Claude ne connaît pas les standards internes sans qu'on les lui transmette.</li><li>Validation juridique obligatoire avant signature ou envoi.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- RESEARCH -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Research / Market Intelligence</div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Research</div>
+            <div class="sit-situation">Veille sur les taux de fret, données de flotte, événements de marché (Canal de Suez, tensions géopolitiques...)</div>
+            <span class="sit-tool tool-perplexity">Perplexity</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Utiliser un espace dédié (Spaces) pour organiser la veille par segment.</li><li>Ouvrir et vérifier les sources avant de publier un chiffre ou une analyse, plusieurs sources peuvent diverger.</li></ul></div></button>
+          </div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Research</div>
+            <div class="sit-situation">Rédiger le BRS Annual Review</div>
+            <span class="sit-tool tool-perplexity">Perplexity + Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Perplexity pour compléter et sourcer des faits à partir de données ouvertes.</li><li>Claude pour structurer et rédiger, en maintenant la cohérence éditoriale.</li><li>Toute donnée chiffrée doit être issue des bases internes ou de sources primaires, puis relue par Research.</li></ul></div></button>
+          </div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Research</div>
+            <div class="sit-situation">Analyser un rapport de marché concurrent ou un document externe long (50+ pages)</div>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Le document peut être collé en plusieurs parties si nécessaire.</li><li>L'analyse produite doit être relue par Research, qui garde la responsabilité de l'interprétation et du message final.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- FFAs -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Freight Derivatives / FFAs</div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">FFAs</div>
+            <div class="sit-situation">Veille de prix et actualités marché FFA, Baltic Exchange, positions ouvertes</div>
+            <span class="sit-tool tool-perplexity">Perplexity</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Adapté à l'agrégation rapide d'informations publiques sourcées.</li><li>Les décisions de couverture ou de position s'appuient sur les données internes et l'expertise du desk, pas sur une synthèse IA.</li></ul></div></button>
+          </div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">FFAs</div>
+            <div class="sit-situation">Analyser des données de positions ou de performance dans un tableur</div>
+            <span class="sit-tool tool-copilot">Copilot</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Copilot dans Excel analyse directement les fichiers internes sans export. Licence M365 payante requise.</li><li>Les résultats doivent être contrôlés par le desk : l'IA propose des pistes d'analyse, elle ne remplace pas le jugement expert.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- OPÉRATIONS -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Opérations / Broking Ops</div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Ops</div>
+            <div class="sit-situation">Synthétiser un long échange d'emails ou d'appels avec un client ou une contrepartie, ou rédiger un compte rendu de réunion interne</div>
+            <span class="sit-tool tool-claude">Claude / Copilot</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Claude transforme une transcription ou des notes en compte rendu structuré (décisions, actions, points ouverts).</li><li>Copilot (M365 payant) génère directement un résumé depuis Teams.</li><li>Pour les échanges contenant des données commerciales ou contractuelles sensibles, utiliser un environnement encadré (Le Chat ou solution approuvée par BRS).</li></ul></div></button>
+          </div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Ops / Broking</div>
+            <div class="sit-situation">Reformuler en volume une série de communications clients du même type (15-20 messages)</div>
+            <span class="sit-tool tool-lechat">Le Chat</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Très rapide pour harmoniser le style et la clarté en série.</li><li>Vérifier que la configuration respecte les exigences de confidentialité, notamment en version gratuite (désactiver le partage de données).</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- MARKETING -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Marketing & Comms</div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Marketing</div>
+            <div class="sit-situation">Traduire des contenus marketing vers plusieurs marchés (anglais, français, espagnol, mandarin, arabe...)</div>
+            <span class="sit-tool tool-chatgpt">ChatGPT</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Préciser le ton, le niveau de formalité et les variantes locales souhaitées.</li><li>Relire attentivement pour vérifier les nuances culturelles et la conformité avec la marque BRS.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- FINANCE -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Finance & Contrôle de gestion</div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Finance</div>
+            <div class="sit-situation">Préparer un rapport de gestion, synthétiser des données financières multi-bureaux</div>
+            <span class="sit-tool tool-claude">Claude / Copilot</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Claude transforme des données déjà consolidées en rapports structurés.</li><li>Copilot (M365) manipule directement les fichiers Excel ou Power BI.</li><li>Données financières : privilégier Copilot Enterprise ou un environnement encadré, ne pas coller de données brutes dans une version grand public.</li></ul></div></button>
+          </div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Finance</div>
+            <div class="sit-situation">Analyser des données chiffrées : taux de commission, revenus par segment, évolution des marges</div>
+            <span class="sit-tool tool-copilot">Copilot</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Analyse directement dans les fichiers internes, sans export. Licence M365 payante requise.</li><li>Les résultats doivent être contrôlés par l'équipe Finance : l'IA propose des pistes, elle ne remplace pas les contrôles ni le jugement expert.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- JURIDIQUE -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Juridique</div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Juridique</div>
+            <div class="sit-situation">Analyser un charterparty long, identifier les clauses à risque, comparer à un template BRS</div>
+            <span class="sit-tool tool-claude">Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Fournir explicitement le template BRS en entrée : Claude ne le connaît pas sans cela.</li><li>Utiliser un environnement Enterprise ou validé par l'IT, pas une version grand public.</li><li>Ne remplace pas l'expertise juridique interne ni l'avis d'un avocat externe.</li></ul></div></button>
+          </div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Juridique</div>
+            <div class="sit-situation">Veille réglementaire (IMO, MARPOL, CII, EU ETS maritime)</div>
+            <span class="sit-tool tool-perplexity">Perplexity</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Remonter systématiquement aux textes officiels (règlements, directives, guidelines) avant toute modification de procédures BRS ou communication à des clients.</li><li>Ne pas s'appuyer sur une synthèse IA sans validation juridique.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- COMPLIANCE -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Compliance / KYC</div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Compliance</div>
+            <div class="sit-situation">Recherche préliminaire sur une entité (armateur, chargeur, contrepartie) dans un contexte de screening sanctions</div>
+            <span class="sit-tool tool-perplexity">Perplexity</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Usage limité à la collecte d'informations publiques ouvertes.</li><li>Ne constitue en aucun cas un screening réglementaire : les vérifications officielles (listes de sanctions, KYC) restent sous la responsabilité exclusive des équipes Compliance via les outils dédiés.</li><li>Validation humaine obligatoire avant toute décision.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- CARBON -->
+        <div class="sit-wrapper">
+          <div class="sit-cat-header">Carbon Markets</div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Carbon Advisory</div>
+            <div class="sit-situation">Rédiger un mémo de conseil pour un client sur les obligations carbone (EU ETS, CII, crédits carbone)</div>
+            <span class="sit-tool tool-perplexity">Perplexity + Claude</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Perplexity pour sourcer les informations réglementaires récentes.</li><li>Claude pour rédiger un mémo structuré à partir des éléments vérifiés.</li><li>Demander à Claude d'identifier les zones d'incertitude avant envoi client.</li><li>Validation finale par l'équipe Carbon indispensable.</li></ul></div></button>
+          </div>
+          <div class="sit-row sit-row-brs">
+            <div class="sit-equipe">Carbon Research</div>
+            <div class="sit-situation">Surveiller les prix du carbone, actualités EU ETS, nouveaux mécanismes</div>
+            <span class="sit-tool tool-perplexity">Perplexity</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Adapté à la veille continue sur un marché en évolution rapide.</li><li>Les décisions et recommandations internes doivent s'appuyer sur une combinaison de données internes, sources officielles et expertise humaine.</li></ul></div></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           PAGE : BRS COPILOT
+      ═══════════════════════════════════════════ -->
+      <div class="page" id="page-brs-copilot">
+        <div class="module-hero">
+          <div class="module-tag">BRS</div>
+          <h1 class="module-title">Copilot <em>chez BRS</em></h1>
+          <p class="module-desc">Copilot est l'assistant IA intégré à Microsoft 365. Il travaille sur les données internes BRS (Teams, Outlook, Word, Excel, SharePoint). Il ne remplace ni la relecture humaine, ni les contrôles Trade Compliance / KYC / sanctions.</p>
+        </div>
+
+        <!-- OUTIL PRINCIPAL -->
+        <h2>Utiliser comme outil principal</h2>
+        <p style="color:var(--muted);font-size:16px;margin-bottom:20px;font-weight:500;">Cas où Copilot est adapté, relecture humaine requise dans tous les cas.</p>
+        <div class="sit-wrapper">
+          <div class="sit-row" style="grid-template-columns:1fr 160px auto;">
+            <div class="sit-situation">Synthétiser une réunion Teams (décisions, actions, questions ouvertes)</div>
+            <span class="sens conf-ok">Outil principal</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Réunion correctement enregistrée et transcrite requise.</li><li>Prompt précis : « liste les décisions », « liste les actions avec responsable et deadline », « liste les questions ouvertes ».</li><li>Relire et compléter avec l'organisateur. Licence M365 payante requise.</li></ul></div></button>
+          </div>
+          <div class="sit-row" style="grid-template-columns:1fr 160px auto;">
+            <div class="sit-situation">Rédiger un email depuis un brief dans Outlook</div>
+            <span class="sens conf-ok">Outil principal</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Indiquer l'objectif, le ton, la longueur, les points à couvrir. Les prompts vagues donnent des résultats génériques.</li><li>L'expéditeur reste responsable du contenu : relire et vérifier avant envoi.</li></ul></div></button>
+          </div>
+          <div class="sit-row" style="grid-template-columns:1fr 160px auto;">
+            <div class="sit-situation">Analyser un tableau Excel (tendances, anomalies, tableau croisé)</div>
+            <span class="sens conf-ok">Outil principal</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Instructions précises : « crée un tableau croisé par segment et par mois », « identifie les 3 tendances principales », « signale les anomalies ».</li><li>Les analyses sont ancrées dans le fichier, pas dans des moyennes de marché.</li><li>Décisions financières et commerciales à valider par Finance et Management.</li></ul></div></button>
+          </div>
+          <div class="sit-row" style="grid-template-columns:1fr 160px auto;">
+            <div class="sit-situation">Résumer un document Word ou PowerPoint ouvert</div>
+            <span class="sens conf-ok">Outil principal</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Instructions structurées : « résume en 5 points », « identifie les clauses à renégocier », « liste les messages clés ».</li><li>Pour les documents très longs (50+ pages), Claude est plus adapté pour une analyse approfondie.</li><li>Les équipes Juridique et commerciales restent responsables de l'interprétation.</li></ul></div></button>
+          </div>
+          <div class="sit-row" style="grid-template-columns:1fr 160px auto;">
+            <div class="sit-situation">Préparer une réunion à partir de fichiers SharePoint ou Teams</div>
+            <span class="sens conf-ok">Outil principal</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Pour des briefs complexes : « pose-moi 5 questions pour clarifier ce que tu dois préparer, puis attends mes réponses ».</li><li>Copilot ne voit que les données M365 auxquelles vous avez déjà accès.</li><li>La préparation finale reste sous la responsabilité de l'équipe.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- À COMBINER -->
+        <h2>À combiner avec Claude</h2>
+        <p style="color:var(--muted);font-size:16px;margin-bottom:20px;font-weight:500;">Cas où Copilot prépare la matière, Claude assure la rédaction ou l'analyse approfondie.</p>
+        <div class="sit-wrapper">
+          <div class="sit-row" style="grid-template-columns:1fr 160px auto;">
+            <div class="sit-situation">Rédiger un rapport de gestion ou un mémo stratégique</div>
+            <span class="sens conf-mix">À combiner</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Copilot extrait les données et éléments clés depuis Excel, SharePoint ou Power BI.</li><li>Claude prend le relais pour la rédaction structurée et le fil argumentaire.</li><li>Sur des documents à fort enjeu, la cohérence globale de Copilot seul peut être fragile.</li></ul></div></button>
+          </div>
+          <div class="sit-row" style="grid-template-columns:1fr 160px auto;">
+            <div class="sit-situation">Analyser un contrat long ou un charterparty (50+ pages)</div>
+            <span class="sens conf-mix">À combiner</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Copilot résume et repère des points importants sur un document Word ouvert, mais sa fenêtre de contexte est limitée pour une analyse juridique approfondie.</li><li>Claude est plus adapté pour une analyse détaillée et structurée.</li><li>Ne remplace pas l'expertise juridique BRS ni les conseils d'avocats externes.</li></ul></div></button>
+          </div>
+          <div class="sit-row" style="grid-template-columns:1fr 160px auto;">
+            <div class="sit-situation">Synthétiser un long échange d'emails avec un client (6 mois, 50+ messages)</div>
+            <span class="sens conf-mix">À combiner</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Copilot peut proposer un résumé via Microsoft Graph, mais le contexte peut être tronqué sur des fils très longs.</li><li>Pour un dossier de litige ou un mémo de négociation, exporter les messages et les soumettre à Claude pour une analyse plus fine.</li><li>Validation finale à la charge du broker ou de l'équipe concernée.</li></ul></div></button>
+          </div>
+          <div class="sit-row" style="grid-template-columns:1fr 160px auto;">
+            <div class="sit-situation">Préparer une proposition commerciale ou un pitch client</div>
+            <span class="sens conf-mix">À combiner</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Copilot rassemble les informations internes dispersées (emails, documents, notes de réunions) sur un client ou un projet.</li><li>Claude prend le relais pour produire le pitch structuré et aligné sur la ligne BRS.</li><li>Version finale à relire et valider par le manager ou l'équipe commerciale.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- INADAPTÉ -->
+        <h2>Inadapté : utiliser un autre outil</h2>
+        <div class="sit-wrapper">
+          <div class="sit-row" style="grid-template-columns:1fr 160px auto;">
+            <div class="sit-situation">Recherche externe (vérifier un fait ou un chiffre de marché, veille sectorielle, benchmark)</div>
+            <span class="sens conf-no">Inadapté</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Copilot travaille sur les données internes M365, il n'est pas conçu comme moteur de recherche externe.</li><li>Utiliser Perplexity pour la collecte et la vérification de sources, les outils data BRS, et les publications officielles.</li><li>Ne jamais publier un chiffre de marché issu de Copilot sans vérification externe.</li></ul></div></button>
+          </div>
+        </div>
+
+        <!-- DONNÉES SENSIBLES -->
+        <h2>Données sensibles & conformité</h2>
+        <div class="sit-wrapper">
+          <div class="sit-row" style="grid-template-columns:1fr 160px auto;">
+            <div class="sit-situation">Travailler sur des données internes confidentielles (RH, finance, contrats)</div>
+            <span class="sens conf-ok">Adapté*</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Version Enterprise uniquement : les données ne servent pas à entraîner les modèles publics.</li><li>Les garanties exactes (hébergement, logs, rétention) dépendent de la configuration mise en place par la DSI.</li><li>En cas de doute, vérifier avec IT et Compliance avant de traiter un corpus sensible.</li></ul></div></button>
+          </div>
+          <div class="sit-row" style="grid-template-columns:1fr 160px auto;">
+            <div class="sit-situation">Données nécessitant un hébergement UE explicite (exigence client ou réglementaire)</div>
+            <span class="sens conf-mix">À compléter</span>
+            <button class="tip-trigger" tabindex="0">i<div class="tip-content"><ul><li>Copilot Enterprise ne garantit pas par défaut un hébergement en Europe.</li><li>Si la contrainte est un hébergement UE explicite, Le Chat est l'alternative adaptée.</li><li>Ces arbitrages doivent être faits avec la DSI, le Juridique et la Compliance.</li></ul></div></button>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--muted);font-weight:500;">* Adapté sous réserve de la configuration Enterprise mise en place par la DSI de BRS.</p>
+      </div>
+
+      <div class="page" id="page-brs-reflexes">
+        <div class="module-hero">
+          <div class="module-tag">BRS</div>
+          <h1 class="module-title">Réflexes <em>IA BRS</em></h1>
+          <p class="module-desc">Utiliser Copilot, Perplexity, Claude et ChatGPT en sécurité, au service des équipes BRS, sans jamais déléguer la décision finale à l'IA.</p>
+        </div>
+
+        <div class="reflexes-grid">
+          <div>
+            <div class="reflexes-col-title do">✓ &nbsp;6 DO : Réflexes à adopter</div>
+            <div class="reflex-card do">
+              <div class="reflex-num">01</div>
+              <div class="reflex-title">Formuler l'objectif avant d'ouvrir un outil</div>
+              <div class="reflex-body">Comprendre, produire un texte, vérifier un chiffre, analyser des données ou préparer une réunion : formuler l'objectif en une phrase avant de choisir Copilot, Perplexity, Claude ou ChatGPT.</div>
+            </div>
+            <div class="reflex-card do">
+              <div class="reflex-num">02</div>
+              <div class="reflex-title">Choisir l'outil selon la tâche</div>
+              <div class="reflex-body">Données internes BRS (Teams, Outlook, Excel, SharePoint) → Copilot en priorité. Faits, chiffres externes, réglementation, marché → Perplexity + vérification des sources. Rédaction longue ou sensible (clients, management) → Claude, avec validation métier.</div>
+            </div>
+            <div class="reflex-card do">
+              <div class="reflex-num">03</div>
+              <div class="reflex-title">Qualifier la sensibilité des données</div>
+              <div class="reflex-body">Public / générique, interne, confidentiel (RH, contrats, clients, finance). Plus la donnée est sensible, plus on privilégie Copilot Enterprise, Le Chat ou des environnements validés par IT / Compliance, et moins on copie-colle dans des outils grand public.</div>
+            </div>
+            <div class="reflex-card do">
+              <div class="reflex-num">04</div>
+              <div class="reflex-title">Vérifier les faits avant de les utiliser</div>
+              <div class="reflex-body">Un chiffre, une date, une position réglementaire ou un nom d'entité produits par un outil IA doivent être vérifiés dans une source primaire avant d'être intégrés à un livrable, une communication client ou une note interne.</div>
+            </div>
+            <div class="reflex-card do">
+              <div class="reflex-num">05</div>
+              <div class="reflex-title">Relire et assumer la décision</div>
+              <div class="reflex-body">L'IA propose, BRS décide : chaque email, note client, contrat, analyse financière ou conseil carbone doit être relu et assumé par une personne identifiée.</div>
+            </div>
+            <div class="reflex-card do">
+              <div class="reflex-num">06</div>
+              <div class="reflex-title">Documenter ce qui est validé</div>
+              <div class="reflex-body">Pour les livrables clés (Annual Review, notes marché, mémos carbone, synthèses juridiques), garder une trace des sources utilisées (internes + externes) et des validations métier (Research, Legal, Finance, Carbon).</div>
+            </div>
+          </div>
+
+          <div>
+            <div class="reflexes-col-title dont">✗ &nbsp;5 DON'T : À éviter absolument</div>
+            <div class="reflex-card dont">
+              <div class="reflex-num">01</div>
+              <div class="reflex-title">Ne jamais publier un chiffre non sourcé</div>
+              <div class="reflex-body">Pas de taux de fret, prix du carbone, indicateur financier ou KPI externe issus uniquement d'un modèle IA sans source explicite et vérifiée.</div>
+            </div>
+            <div class="reflex-card dont">
+              <div class="reflex-num">02</div>
+              <div class="reflex-title">Ne pas coller de données sensibles dans des outils non validés</div>
+              <div class="reflex-body">Pas de contrats complets, données RH, dossiers clients ou fichiers financiers bruts dans des versions grand public ou des applications IA non approuvées par BRS.</div>
+            </div>
+            <div class="reflex-card dont">
+              <div class="reflex-num">03</div>
+              <div class="reflex-title">Ne pas confondre outil pédagogique et outil de vérification</div>
+              <div class="reflex-body">ChatGPT et Claude sont excellents pour comprendre un sujet, pas pour acter des chiffres ou des positions réglementaires. Pour cela : Perplexity + sources officielles + experts internes.</div>
+            </div>
+            <div class="reflex-card dont">
+              <div class="reflex-num">04</div>
+              <div class="reflex-title">Ne pas considérer Copilot comme infaillible</div>
+              <div class="reflex-body">Copilot aide à naviguer dans les données M365, mais il peut manquer des éléments, résumer de travers ou ignorer un document clé. Toujours croiser avec son propre jugement sur les dossiers critiques.</div>
+            </div>
+            <div class="reflex-card dont">
+              <div class="reflex-num">05</div>
+              <div class="reflex-title">Ne pas laisser l'IA écrire à la place de BRS</div>
+              <div class="reflex-body">Aucun texte IA ne doit partir au client, à un régulateur ou en externe sans relecture et adaptation au ton BRS, ni sans prise en compte des enjeux Trade Compliance / KYC / sanctions.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          </div><!-- /content -->
   </div><!-- /main -->
-</div><!-- /app -->
 
 <button class="mobile-toggle" id="mobile-toggle" onclick="toggleSidebar()">☰</button>
 
@@ -1966,6 +2974,7 @@ const PAGES = [
   'intro','llm-fonctionnement','llm-limites','llm-sources',
   'chatgpt','claude','gemini','copilot','perplexity','lechat','poe',
   'scenarios','confidentialite','tarifs',
+  'brs-situations','brs-copilot','brs-reflexes',
   'regles-prompt','patterns','techniques','quiz'
 ];
 
@@ -1981,9 +2990,12 @@ const TITLES = {
   perplexity: 'Perplexity',
   lechat: 'Le Chat',
   poe: 'Poe',
-  scenarios: 'Quel outil pour quelle tâche',
+  scenarios: 'Situations générales',
   confidentialite: 'Confidentialité & RGPD',
   tarifs: 'Tarifs',
+  'brs-situations': 'Situations BRS',
+  'brs-copilot': 'Copilot chez BRS',
+  'brs-reflexes': 'Réflexes IA BRS',
   'regles-prompt': 'Règles universelles',
   patterns: 'Patterns à éviter',
   techniques: 'Techniques avancées',
@@ -2052,24 +3064,24 @@ const questions = [
     q: "Quel outil est le seul à garantir l'hébergement en Europe par défaut, sans configuration supplémentaire&nbsp;?",
     opts: ["Claude (Anthropic)", "Gemini (Google)", "Le Chat (Mistral AI)", "Copilot (Microsoft)"],
     correct: 2,
-    exp: "Le Chat est développé par Mistral AI à Paris. Hébergement EU garanti, RGPD natif — aucune loi américaine ne s'applique."
+    exp: "Le Chat est développé par Mistral AI à Paris. Hébergement EU garanti, RGPD natif : aucune loi américaine ne s'applique."
   },
   {
     q: "Un LLM «&nbsp;hallucine&nbsp;» parce que&nbsp;:",
     opts: [
       "Il manque de puissance de calcul",
-      "Il optimise la cohérence d'une réponse, pas sa véracité — et ne sait pas ce qu'il ne sait pas",
+      "Il optimise la cohérence d'une réponse, pas sa véracité, et ne sait pas ce qu'il ne sait pas",
       "Il a été entraîné sur trop peu de données",
       "Il n'a pas accès à internet"
     ],
     correct: 1,
-    exp: "Les LLM prédisent le mot suivant le plus probable. Quand l'information manque, ils génèrent la réponse la plus cohérente possible — quitte à l'inventer."
+    exp: "Les LLM prédisent le mot suivant le plus probable. Quand l'information manque, ils génèrent la réponse la plus cohérente possible, quitte à l'inventer."
   },
   {
     q: "Pour analyser un document de 80 pages, quel outil est le plus adapté&nbsp;?",
     opts: ["ChatGPT", "Perplexity", "Claude", "Poe"],
     correct: 2,
-    exp: "Claude dispose d'une fenêtre de contexte de 200 000 tokens (~150 000 mots) — l'équivalent de 2 romans denses en une session. C'est son point fort distinctif."
+    exp: "Claude dispose d'une fenêtre de contexte de 200 000 tokens (~150 000 mots), l'équivalent de 2 romans denses en une session. C'est son point fort distinctif."
   },
   {
     q: "L'étude Nielsen (2023) montre que ChatGPT&nbsp;:",
@@ -2086,14 +3098,14 @@ const questions = [
     q: "Quelle technique consiste à commencer vous-même la réponse pour que le modèle continue dans votre ton&nbsp;?",
     opts: ["Few-shot", "Tree of Thoughts", "Prefill (amorce)", "NSA"],
     correct: 2,
-    exp: "Le Prefill (amorce) force le modèle à continuer dans le ton et la structure que vous avez lancés — résultat plus proche de votre style."
+    exp: "Le Prefill (amorce) force le modèle à continuer dans le ton et la structure que vous avez lancés : résultat plus proche de votre style."
   },
   {
     q: "Perplexity est particulièrement adapté pour&nbsp;:",
     opts: [
       "Rédiger un article de blog de 800 mots",
       "Brainstorming et idéation créative",
-      "Recherche factuelle sourcée — chaque affirmation est citée et vérifiable en un clic",
+      "Recherche factuelle sourcée : chaque affirmation est citée et vérifiable en un clic",
       "Analyser des fichiers Google Drive"
     ],
     correct: 2,
@@ -2111,15 +3123,15 @@ const questions = [
     exp: "Les formules de cadrage et intensifieurs vides n'apportent aucune information utile au modèle. Si quelque chose est important, montrez-le par l'argument."
   },
   {
-    q: "Pour exploiter des emails Teams et fichiers SharePoint internes, quel outil faut-il utiliser — et avec quelle condition&nbsp;?",
+    q: "Pour exploiter des emails Teams et fichiers SharePoint internes, quel outil faut-il utiliser, et avec quelle condition&nbsp;?",
     opts: [
-      "ChatGPT Plus — l'abonnement suffit",
+      "ChatGPT Plus : l'abonnement suffit",
       "Copilot, uniquement avec le plan M365 Copilot payant (30 $/mois)",
       "Gemini via Google Workspace, car il est natif dans les outils Microsoft",
-      "Perplexity Pro — il indexe tout en temps réel"
+      "Perplexity Pro : il indexe tout en temps réel"
     ],
     correct: 1,
-    exp: "Microsoft Copilot accède à vos données internes M365 via Microsoft Graph — uniquement avec le plan M365 Copilot payant. La version gratuite ne lit pas vos fichiers."
+    exp: "Microsoft Copilot accède à vos données internes M365 via Microsoft Graph : uniquement avec le plan M365 Copilot payant. La version gratuite ne lit pas vos fichiers."
   }
 ];
 
@@ -2197,14 +3209,140 @@ function showResult() {
   let emoji = pct >= 80 ? '🎯' : pct >= 60 ? '📈' : '📚';
   document.getElementById('quiz-score-text').innerHTML = emoji + ' ' + s + ' / ' + t;
   document.getElementById('quiz-score-sub').textContent =
-    pct >= 80 ? 'Excellent — vous maîtrisez les outils.' :
-    pct >= 60 ? 'Bonne base — quelques modules à revoir.' :
-    'Relisez les modules — la formation est là pour ça.';
+    pct >= 80 ? 'Excellent : vous maîtrisez les outils.' :
+    pct >= 60 ? 'Bonne base : quelques modules à revoir.' :
+    'Relisez les modules : la formation est là pour ça.';
   document.getElementById('quiz-result').style.display = 'block';
   document.getElementById('quiz-result').scrollIntoView({ behavior: 'smooth' });
 }
 
 function restartQuiz() { buildQuiz(); }
+
+// ── SITUATION SEARCH ────────────────────────
+function filterTable(table, query) {
+  const q = query.trim().toLowerCase();
+  const prefix = table === 'gen' ? '#page-scenarios' : '#page-brs-situations';
+  const wrappers = document.querySelectorAll(prefix + ' .sit-wrapper');
+  let total = 0, visible = 0;
+
+  wrappers.forEach(wrapper => {
+    const rows = wrapper.querySelectorAll('.sit-row');
+    let wrapperVisible = 0;
+    rows.forEach(row => {
+      total++;
+      const text = row.textContent.toLowerCase();
+      const match = !q || text.includes(q);
+      row.classList.toggle('hidden', !match);
+      if (match) { wrapperVisible++; visible++; }
+    });
+    wrapper.classList.toggle('hidden', wrapperVisible === 0);
+  });
+
+  const countEl = document.getElementById('count-' + table);
+  const noResultEl = document.getElementById('noresult-' + table);
+  if (q) {
+    countEl.textContent = visible + ' résultat' + (visible !== 1 ? 's' : '');
+    noResultEl.style.display = visible === 0 ? 'block' : 'none';
+  } else {
+    countEl.textContent = '';
+    noResultEl.style.display = 'none';
+  }
+}
+
+// ── HOME SEARCH ──────────────────────────────
+// Build index of all situations from both tables
+function buildSearchIndex() {
+  const idx = [];
+  // General table
+  document.querySelectorAll('#page-scenarios .sit-row').forEach(row => {
+    const sit = row.querySelector('.sit-situation');
+    const tool = row.querySelector('.sit-tool');
+    if (sit) idx.push({
+      text: sit.textContent.trim(),
+      tool: tool ? tool.textContent.trim() : '',
+      tag: 'gen',
+      label: 'Général',
+      page: 'scenarios'
+    });
+  });
+  // BRS table
+  document.querySelectorAll('#page-brs-situations .sit-row').forEach(row => {
+    const sit = row.querySelector('.sit-situation');
+    const equipe = row.querySelector('.sit-equipe');
+    const tool = row.querySelector('.sit-tool');
+    if (sit) idx.push({
+      text: sit.textContent.trim(),
+      tool: tool ? tool.textContent.trim() : '',
+      tag: 'brs',
+      label: equipe ? equipe.textContent.trim() : 'BRS',
+      page: 'brs-situations'
+    });
+  });
+  return idx;
+}
+
+let searchIndex = null;
+
+function heroSearch(query) {
+  if (!searchIndex) searchIndex = buildSearchIndex();
+  const q = query.trim().toLowerCase();
+  const resultsEl = document.getElementById('hero-search-results');
+
+  if (!q) { resultsEl.classList.remove('open'); return; }
+
+  const matches = searchIndex.filter(item =>
+    item.text.toLowerCase().includes(q) ||
+    item.tool.toLowerCase().includes(q) ||
+    item.label.toLowerCase().includes(q)
+  ).slice(0, 8);
+
+  if (matches.length === 0) {
+    resultsEl.innerHTML = '<div class="hero-search-empty">Aucun résultat pour "' + query + '"</div>';
+  } else {
+    resultsEl.innerHTML = matches.map((m, i) =>
+      `<div class="hero-search-result-item" onclick="heroGoTo('${m.page}', '${m.tag}', '${encodeURIComponent(query)}')" data-idx="${i}">
+        <div class="hero-result-text">${m.text}</div>
+        <span class="hero-result-tag ${m.tag}">${m.label}</span>
+        <span class="sit-tool tool-${m.tool.split(' ')[0].toLowerCase().replace('+','')}" style="font-size:11px;padding:3px 8px;">${m.tool}</span>
+      </div>`
+    ).join('');
+  }
+  resultsEl.classList.add('open');
+}
+
+function heroGoTo(page, tag, query) {
+  const btn = [...document.querySelectorAll('.nav-item')].find(b =>
+    b.getAttribute('onclick') && b.getAttribute('onclick').includes("'" + page + "'")
+  );
+  showPage(page, btn);
+  // Pre-fill the table search
+  setTimeout(() => {
+    const tableId = tag === 'gen' ? 'search-gen' : 'search-brs';
+    const el = document.getElementById(tableId);
+    if (el) {
+      el.value = decodeURIComponent(query);
+      filterTable(tag === 'gen' ? 'gen' : 'brs', decodeURIComponent(query));
+      el.focus();
+    }
+  }, 100);
+  document.getElementById('hero-search-results').classList.remove('open');
+  document.getElementById('hero-search').value = '';
+}
+
+function heroSearchKey(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('hero-search-results').classList.remove('open');
+    document.getElementById('hero-search').value = '';
+  }
+}
+
+// Close hero search on outside click
+document.addEventListener('click', e => {
+  const wrap = document.getElementById('hero-search-wrap');
+  if (wrap && !wrap.contains(e.target)) {
+    document.getElementById('hero-search-results').classList.remove('open');
+  }
+});
 
 // Init
 buildQuiz();
